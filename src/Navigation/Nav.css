@@ -1,0 +1,132 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0 1.5em;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(to top, #66bc34f9,#f2eeee 70%);
+    position: fixed;
+    width: 100%;  
+    z-index: 100;  
+}
+
+.logo__container{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo__container--img{
+    width: 50%;
+    min-width: 130px;
+    max-width: 200px;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+.input__container{
+    flex: 1;
+    width: 50%;
+    margin: 0 auto;
+}
+.input__container--input{
+    border:1px solid grey;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 70%;
+    height: 3em;
+    transition: 0.5s ease all;
+    padding-left: 10px;
+
+}
+.input__container--button{
+    height: 3em;
+    width: 30%;
+    letter-spacing: 1.4px;
+    max-width: 120px;
+    min-width: 60px;
+    background-color: #0165fe;
+    border-radius: 0 5px 5px 0;
+    border:none;
+    color:white;
+    cursor: pointer;
+    transition: 0.5s ease all;
+
+}
+.input__container--button:hover{
+    background-color: #024fc3;
+}
+.cart__container{
+    flex: 1;
+    position: relative;
+}
+.cart__container--logo{
+    position: relative;
+    left:85%;
+}
+.cart__container--logo--i{
+    color:#0165fe;
+    font-size: 1.4em;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease all;
+
+}
+.cart__container--logo--i:hover{
+   border: 1px solid #0165fe;
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    .input__container{
+        flex:2;
+        width: 60%;
+        text-align: center;
+    }
+    .input__container--input{
+        width: 55%;
+    }
+    .input__container--button{
+        width: 20%;
+    }
+    .cart__container--logo{
+        position: relative;
+        left:65%;
+    }
+    
+}
+
+@media only screen and (max-width: 650px) {
+    nav{
+        height: 18vh;
+    }
+    .cart__container{
+        position: relative;
+        top:-25px;
+    }
+    .cart__container--logo{
+        left:75%;
+    }
+    .logo__container{
+        position: relative;
+        top:-25px;
+    }
+    .input__container{
+        position: absolute;
+        top: 60%;
+        height: 2em;
+        width: 100%;
+        left:0;
+        margin-bottom: 2em;
+    }
+    .input__container--button{
+        width: 20%;
+    }
+    
+    
+  }
