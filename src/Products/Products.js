@@ -11,7 +11,7 @@ function Products(productData) {
       {productData.productData.map((product,index)=>{
         return (
             //because flexbox & width:25%.use index values of 4
-            index<16 &&
+            index<64 &&
             <div className='product__card'>
               <div className='product__card--section__container product__card--image__container'>
                 <img src={product.imageLink}/>
