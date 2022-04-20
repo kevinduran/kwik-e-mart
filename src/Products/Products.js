@@ -13,10 +13,17 @@ function Products(productData) {
             //because flexbox & width:25%.use index values of 4
             index<16 &&
             <div className='product__card'>
+              <div className='product__card--section__container product__card--image__container'>
                 <img src={product.imageLink}/>
+              </div>
+              <div className='product__card--section__container product__card--info__container'>
                 <p>{product.itemName}</p>
-                <p>$ {product.price}</p>
+  
+                <p className='product__card--info--price' >$ {product.price}</p>
+              </div>
+              <div className='product__card--section__container product__card--button__container'>
                 <button className='product__card--button'>add to cart</button>
+              </div>
             </div>
            
         )

@@ -9,11 +9,24 @@
 .product__card{
     border: 5px solid #66bc34;
     border-radius: 25px;
-    padding: 10px;
+    padding: 20px 20px 50px 20px;
     width: 20%;
     min-width: 200px;
     margin:5px;
     background-color: #fff;
+    position: relative;
+    color:rgb(89, 86, 86);
+}
+.product__card--info--price{
+    color: #bb0001;
+    padding-top: 6.9420px;
+}
+.product__card--button__container{
+    position: absolute;
+    bottom:4%;
+    width:100%;
+    text-align: center;
+    left: 0;
 }
 
 .product__card--button{
@@ -22,4 +35,10 @@
     border: none;
     outline: none;
     border-radius: 5px;
+    height: 30px;
+    width: 101px;
+    cursor: pointer;
+}
+.product__card--button:hover{
+    background-color: rgb(240, 45, 45);
 }
