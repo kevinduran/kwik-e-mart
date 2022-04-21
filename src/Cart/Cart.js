@@ -1,5 +1,6 @@
 import React from 'react'
 import './Cart.css'
+import Apu from '../assets/apu.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowTurnRight } from '@fortawesome/free-solid-svg-icons'
@@ -7,7 +8,7 @@ import { faArrowTurnRight } from '@fortawesome/free-solid-svg-icons'
 function Cart() {
   return (
     <div className='cart'>
-        <div className='cart--open'>
+        <div className='cart--open--top'>
             <div className='cart--open--button--close__container'>
                 <button className='cart--open--button--close'>
                     <div className='x--line x--line1'></div>
@@ -16,11 +17,31 @@ function Cart() {
             </div>
             <div className='cart--open--button--checkout__container'>
                 <button className='cart--open--button--checkout'>
-                    <FontAwesomeIcon icon={faArrowTurnRight}  />
+                <span className="cart--open--button--checkout--i"><FontAwesomeIcon icon={faArrowTurnRight}  /></span>
+                <p className="cart--open--button--checkout--p">go to cart</p>
                 </button>
             </div>
-            
-
+        </div>
+        <div className='cart--open--bottom'>
+            <div className='cart--open--bottom__item'>
+                <img src={Apu}/>
+                <div className='cart--open--bottom__item--name'>
+                    <p>Belching Beaver Peanut</p>
+                </div>
+                <div className='cart--open--bottom__item--price'>
+                    <p>$5.00</p>
+                </div>
+                <div className='cart--open--bottom__item--quantity'>
+                    <p>1</p>
+                </div>
+                <div className='cart--open--bottom__item--total'>
+                    <p>$5.00</p>
+                </div>
+                <div className='cart--open--bottom__item--close'>
+                    <p>x</p>
+                </div>
+                
+            </div>
         </div>
         
     </div>
