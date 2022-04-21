@@ -1,16 +1,22 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import './Cart.css'
 import Apu from '../assets/apu.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowTurnRight } from '@fortawesome/free-solid-svg-icons'
 
+import{CartToggleContext} from '../Helper/Context'
+
 function Cart() {
+
+  const {cartOpen,setCartOpen} = useContext(CartToggleContext)
+
   return (
-    <div className='cart'>
+    <div className={cartOpen?'cart--open':'cart--closed'}>
+        
         <div className='cart--open--top'>
             <div className='cart--open--button--close__container'>
-                <button className='cart--open--button--close'>
+                <button onClick={()=>setCartOpen(false)} className='cart--open--button--close'>
                     <div className='x--line x--line1'></div>
                     <div className='x--line x--line2'></div>
                 </button>

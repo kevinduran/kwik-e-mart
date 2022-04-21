@@ -1,11 +1,22 @@
-.cart{
+.cart--closed{
     height: 100vh;
     z-index: 666;
     position: fixed;
-    right: 0;
+    right: -40%;
     width: 40%;
     background-color: #66bc34f5;
     padding: 1em;
+    transition: 0.5s ease all;
+}
+.cart--open{
+    right: 0;
+    height: 100vh;
+    z-index: 666;
+    position: fixed;
+    width: 40%;
+    background-color: #66bc34f5;
+    padding: 1em;
+    transition: 0.5s ease all;
 }
 .cart--open--top{
     display: flex;

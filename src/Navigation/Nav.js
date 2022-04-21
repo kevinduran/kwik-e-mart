@@ -18,7 +18,7 @@ function Nav() {
             <button className='input__container--button' type="button">search</button>
         </div>
         <div className='cart__container'>
-            <span class="cart__container--logo"><FontAwesomeIcon icon={faCartShopping} className='cart__container--logo--i' /></span>
+            <span className="cart__container--logo"><FontAwesomeIcon icon={faCartShopping} className='cart__container--logo--i' /></span>
         </div>
         </nav>
   )
