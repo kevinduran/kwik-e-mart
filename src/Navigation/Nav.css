@@ -62,21 +62,22 @@ nav{
     flex: 1;
     position: relative;
 }
-.cart__container--logo{
+.cart__container--logo--button{
     position: relative;
     left:85%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s ease all;
 }
+.cart__container--logo--button:hover .cart__container--logo--i{
+    color:#024fc3;
+ }
 .cart__container--logo--i{
     color:#0165fe;
     font-size: 1.4em;
     padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.5s ease all;
-
-}
-.cart__container--logo--i:hover{
-   border: 1px solid #0165fe;
 }
 
 
