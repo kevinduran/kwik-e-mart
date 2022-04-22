@@ -91,10 +91,19 @@
     margin-top: 2em;
 }
 .cart--open--bottom__item{
-    height: 10vh;
+    height: 15vh;
     display: flex;
-    border: 1px solid red;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 15px;
 }
+
+.cart--open__item--image__container{
+   height: 100%;
+}
+.cart--open__item--image{
+    height: 100%;
+ }
 
 
 

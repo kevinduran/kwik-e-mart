@@ -29,24 +29,13 @@ function Cart() {
             </div>
         </div>
         <div className='cart--open--bottom'>
-            <div className='cart--open--bottom__item'>
-                <img src={Apu}/>
-                <div className='cart--open--bottom__item--name'>
-                    <p>Belching Beaver Peanut</p>
+            <div className='cart--open--bottom__item'>   
+                <div className='cart--open__item--image__container'>
+                    <img className='cart--open__item--image' src={Apu}/>
                 </div>
-                <div className='cart--open--bottom__item--price'>
-                    <p>$5.00</p>
-                </div>
-                <div className='cart--open--bottom__item--quantity'>
-                    <p>1</p>
-                </div>
-                <div className='cart--open--bottom__item--total'>
-                    <p>$5.00</p>
-                </div>
-                <div className='cart--open--bottom__item--close'>
-                    <p>x</p>
-                </div>
-                
+                <div>
+
+                </div>      
             </div>
         </div>
         
