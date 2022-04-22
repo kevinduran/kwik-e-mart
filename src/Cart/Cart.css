@@ -95,3 +95,11 @@
     display: flex;
     border: 1px solid red;
 }
+
+
+
+@media only screen and (max-width: 669px) {
+    .cart--open{
+        width: 60%;
+    }
+}
