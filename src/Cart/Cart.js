@@ -60,7 +60,15 @@ function Cart() {
                                 <p>{data.itemName}</p>
                             </div>
                             <div className='cart__item--info--top--right'>
-                                <button className='cart__item--close__button'>
+                                <button 
+                                    onClick={()=>{
+                                        let newList = cartItemData.filter((item)=>{
+                                                return (item.itemName != data.itemName)
+                                        })
+                                        setCartItemData(newList)
+                                        console.log(newList)
+                                    }} 
+                                    className='cart__item--close__button'>
                                     <span className="cart__item--close__button--icon"><FontAwesomeIcon icon={faTrashCan}  /></span>
                                 </button>
                             </div>
