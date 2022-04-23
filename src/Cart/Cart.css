@@ -96,7 +96,6 @@
     
 }
 .cart--open--bottom__item{
-    height: 15vh;
     display: flex;
     background-color: #fff;
     overflow: hidden;
@@ -188,7 +187,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-right: 5%;
+    margin-right: 6.9%;
 }
 .cart__item--total{
     color: #bb0001;

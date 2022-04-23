@@ -9,6 +9,7 @@ function Products(productData) {
   const {cartOpen,setCartOpen} = useContext(CartToggleContext)
 
 
+
   return (
     <div className='product__card__container'>
       {productData.productData.map((product,index)=>{
@@ -25,7 +26,7 @@ function Products(productData) {
                 <p className='product__card--info--price' >$ {product.price}</p>
               </div>
               <div className='product__card--section__container product__card--button__container'>
-                <button onClick={()=>setCartOpen(true)} className='product__card--button'>add to cart</button>
+                <button onClick={()=>{setCartOpen(true)}} className='product__card--button'>add to cart</button>
               </div>
             </div>
            
