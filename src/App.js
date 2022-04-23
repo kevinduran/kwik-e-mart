@@ -7,22 +7,25 @@ import Products from './Products/Products';
 import Cart from './Cart/Cart';
 
 import {CartToggleContext} from './Helper/Context'
-
+import {CartItemQuantityContext} from './Helper/Context'
 function App() {
 
   const [cartOpen, setCartOpen] = useState(false);
-
+  const [itemQuantity,setItemQuantity] = useState(0)
  
 
   return (
-      <CartToggleContext.Provider value={{cartOpen, setCartOpen}}>
+    <CartToggleContext.Provider value={{cartOpen, setCartOpen}}>
+    <CartItemQuantityContext.Provider value={{itemQuantity,setItemQuantity}}>
         <div className="App">
           <Nav/>
           <Cart/>
           <Header/>
           <Products productData={ProductData} />
         </div>  
-      </CartToggleContext.Provider>
+     </CartItemQuantityContext.Provider> 
+     </CartToggleContext.Provider>
+
     
   );
 }

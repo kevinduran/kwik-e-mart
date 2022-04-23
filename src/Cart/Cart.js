@@ -5,11 +5,12 @@ import Apu from '../assets/apu.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowTurnRight, faTrashCan } from '@fortawesome/free-solid-svg-icons'
 
-import{CartToggleContext} from '../Helper/Context'
+import{CartToggleContext, CartItemQuantityContext} from '../Helper/Context'
 
 function Cart() {
 
   const {cartOpen,setCartOpen} = useContext(CartToggleContext)
+  const {itemQuantity,setItemQuantity} = useContext(CartItemQuantityContext)
 
   return (
     <div className={cartOpen?'cart--open':'cart--closed'}>
@@ -49,14 +50,14 @@ function Cart() {
                     <div className='cart__item--info--bottom'>
                         <div className='cart__item--quantity__container'>
                             <div className="cart__item--quantity--button__container">
-                                <button className='cart__item--quantity--button'>-</button>
-                                <p className='cart__item--quantity--total'>0</p>
-                                <button className='cart__item--quantity--button'>+</button>                          
+                                <button onClick={()=> setItemQuantity(itemQuantity-1)} className='cart__item--quantity--button'>-</button>
+                                <p className='cart__item--quantity--total'>{itemQuantity}</p>
+                                <button onClick={()=> setItemQuantity(itemQuantity+1)} className='cart__item--quantity--button'>+</button>                          
                             </div>
                            </div>
                         <div className='cart__item--total__container'>
                             <div className='cart__item--total'>
-                                <p className='cart__item--total--number'>$69</p>
+                                <p className='cart__item--total--number'>${10*itemQuantity}</p>
                             </div>
                         </div>
                     </div>
