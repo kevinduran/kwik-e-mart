@@ -6,13 +6,15 @@ import Header from './Header/Header';
 import Products from './Products/Products';
 import Cart from './Cart/Cart';
 
-import {CartToggleContext,CartItemQuantityContext} from './Helper/Context'
+import {CartToggleContext,CartItemQuantityContext,CartItemDataContext} from './Helper/Context'
 function App() {
 
   const [cartOpen, setCartOpen] = useState(false);
-  const [itemQuantity,setItemQuantity] = useState(0)
+  const [itemQuantity,setItemQuantity] = useState(1);
+  const [cartItemData, setCartItemData] =  useState([]);
 
   return (
+    <CartItemDataContext.Provider value={{cartItemData,setCartItemData}}>
     <CartToggleContext.Provider value={{cartOpen, setCartOpen}}>
     <CartItemQuantityContext.Provider value={{itemQuantity,setItemQuantity}}>
         <div className="App">
@@ -23,6 +25,7 @@ function App() {
         </div>  
      </CartItemQuantityContext.Provider> 
      </CartToggleContext.Provider> 
+     </CartItemDataContext.Provider>
   );
 }
 
