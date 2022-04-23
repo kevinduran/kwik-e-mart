@@ -83,7 +83,7 @@ function Cart() {
                             </div>
                             <div className='cart__item--total__container'>
                                 <div className='cart__item--total'>
-                                    <p className='cart__item--total--number'>${data.price * itemQuantity}</p>
+                                    <p className='cart__item--total--number'>${(data.price * itemQuantity).toFixed(2)}</p>
                                 </div>
                             </div>
                         </div>
@@ -95,13 +95,6 @@ function Cart() {
 
 
     })}
-
-
-
-
-
-
-
 
 
         </div>
