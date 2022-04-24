@@ -1,5 +1,5 @@
 import React from 'react'
-import {FaTwitter} from 'react-icons/fa'
+import {FaTwitter, FaInstagram, FaEnvelope} from 'react-icons/fa'
 
 
 
@@ -55,6 +55,8 @@ function Footer() {
                     <p>kwikemart@gmail.com</p>
                     <div>
                         <FaTwitter/>
+                        <FaInstagram/>
+                        <FaEnvelope/>
                     </div>
                 </div>
             </div>
