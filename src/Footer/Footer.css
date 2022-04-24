@@ -15,6 +15,23 @@
     border: 1px solid blue;
 
 }
+.footer__email--button{
+    background-color: transparent;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    padding:10px;
+}
+.footer__email--button:hover .footer__email--button--icon{
+    color:#2d6717;
+}
+
+.footer__email--button--icon{
+    color:#70ee3e;
+    font-size: 1.1em;
+}
+
+
 .footer--top--two{
     width: 50%;
         border: 1px solid blue;
