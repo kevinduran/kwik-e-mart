@@ -1,5 +1,4 @@
 .footer{
-    height: 75vh;
     background-color: rgb(50, 58, 52);
     display: flex;
     flex-direction: column;
@@ -8,6 +7,7 @@
 }
 .footer--top{
     display: flex;
+    align-items: center;
 }
 .footer--top--one{
     width: 50%;
@@ -24,8 +24,17 @@
     border-bottom:2px solid rgb(180, 187, 188);
     border-radius: 1px;
     width: 70%;
+    display: flex;
+    justify-content: space-between;
 }
-
+.footer--top--word__container--top{
+    letter-spacing: 1.5px;
+}
+.footer--top--word__container--bottom{
+    letter-spacing: 2px;
+    font-size: 2.5em;
+    color: aliceblue;
+}
 
 .footer__email--button{
     background-color: transparent;
@@ -46,13 +55,26 @@
 
 .footer--top--two{
     width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer--top--image__container{
+    width: fit-content;
+   
+}
+.footer--top--image{
+    max-width: 400px;
 }
 .footer--bottom{
     display: flex;
+
 }
 .footer--bottom--one{
     width: 50%;
+
 }
 .footer--bottom--two{
     width: 50%;
+
 }

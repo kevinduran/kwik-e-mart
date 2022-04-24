@@ -14,9 +14,9 @@ function Footer() {
     <div className='footer'>
         <div className='footer--top'>
             <div className='footer--top--one'>
-                <div>
-                    <h5>we only accept bitcoin</h5>
-                    <h2>Thank you, come again.</h2>
+                <div className='footer--top--word__container'>
+                    <h5 className='footer--top--word__container--top'>we only accept bitcoin</h5>
+                    <h2 className='footer--top--word__container--bottom'>Thank you, come again.</h2>
                 </div>
                 <div className='footer--top--input__container'>
                     <input className='footer--top--input' placeholder='I will ignore your email.'></input>
@@ -24,7 +24,9 @@ function Footer() {
                 </div>
             </div>
             <div className='footer--top--two'>
-                <img src={FooterImage} />
+                <div className='footer--top--image__container'>
+                    <img className='footer--top--image' src={FooterImage} />
+                </div>
             </div>
         </div>
         <div className='footer--bottom'>
