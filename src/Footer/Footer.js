@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import Apu from '../assets/footer_image.png'
+import FooterImage from '../assets/footer_image.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
@@ -9,8 +9,8 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 function Footer() {
   return (
     <div className='footer'>
-        <div>
-            <div>
+        <div className='footer--top'>
+            <div className='footer--top--one'>
                 <div>
                     <h5>we only accept bitcoin</h5>
                     <h2>Thank you, come again.</h2>
@@ -19,17 +19,17 @@ function Footer() {
                     <input placeholder='I will ignore your email.'></input><button className='footer__email--button'><span className='footer__email--button--icon'><FontAwesomeIcon icon={faEnvelope} /></span></button>
                 </div>
             </div>
-            <div>
-                <img src={Apu} />
+            <div className='footer--top--two'>
+                <img src={FooterImage} />
             </div>
         </div>
-        <div>
-            <div>
-                <div>
+        <div className='footer--bottom'>
+            <div className='footer--bottom--one'>
+                <div >
                     <h2>kwik-e-mart</h2>
                     <p>I'm so glad you came. If I don't increase profits, I'll have to sell Sanjay to the Krusty Burger!</p>
                 </div>
-                <div>
+                <div >
                     <ul>
                         <li>About</li>
                         <li>Jobs</li>
@@ -38,7 +38,7 @@ function Footer() {
 
                 </div>
             </div>
-            <div>
+            <div className='footer--bottom--one'>
                 <div>
                     <ul>
                         <li>Terms and Conditions</li>

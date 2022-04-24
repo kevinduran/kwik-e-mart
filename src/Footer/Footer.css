@@ -1,4 +1,34 @@
 .footer{
     height: 75vh;
-    background-color: rgba(150, 153, 150, 0.663);
+    background-color: rgb(223, 216, 216);
+    display: flex;
+    flex-direction: column;
+    padding: 5em;
+}
+.footer--top{
+    display: flex;
+    border: 1px solid blue;
+}
+.footer--top--one{
+    width: 50%;
+    border: 1px solid blue;
+
+}
+.footer--top--two{
+    width: 50%;
+        border: 1px solid blue;
+
+}
+.footer--bottom{
+    display: flex;
+    border: 1px solid blue;
+
+}
+.footer--bottom--one{
+    border: 1px solid blue;
+
+}
+.footer--bottom--two{
+    border: 1px solid blue;
+
 }
