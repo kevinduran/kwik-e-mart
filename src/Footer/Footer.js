@@ -18,8 +18,9 @@ function Footer() {
                     <h5>we only accept bitcoin</h5>
                     <h2>Thank you, come again.</h2>
                 </div>
-                <div>
-                    <input placeholder='I will ignore your email.'></input><button className='footer__email--button'><span className='footer__email--button--icon'><FontAwesomeIcon icon={faEnvelope} /></span></button>
+                <div className='footer--top--input__container'>
+                    <input className='footer--top--input' placeholder='I will ignore your email.'></input>
+                    <button className='footer__email--button'><span className='footer__email--button--icon'><FontAwesomeIcon icon={faEnvelope} /></span></button>
                 </div>
             </div>
             <div className='footer--top--two'>

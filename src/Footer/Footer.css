@@ -4,17 +4,27 @@
     display: flex;
     flex-direction: column;
     padding: 5em;
-    color: rgb(216, 234, 222);
+    color: #98bacb;
 }
 .footer--top{
     display: flex;
-    border: 1px solid blue;
 }
 .footer--top--one{
     width: 50%;
-    border: 1px solid blue;
 
 }
+.footer--top--input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+}
+.footer--top--input__container{
+    border-bottom: 1px solid grey;
+    width: 70%;
+}
+
+
 .footer__email--button{
     background-color: transparent;
     border: none;
@@ -34,21 +44,13 @@
 
 .footer--top--two{
     width: 50%;
-        border: 1px solid blue;
-
 }
 .footer--bottom{
     display: flex;
-    border: 1px solid blue;
-
 }
 .footer--bottom--one{
     width: 50%;
-    border: 1px solid blue;
-
 }
 .footer--bottom--two{
     width: 50%;
-    border: 1px solid blue;
-
 }
