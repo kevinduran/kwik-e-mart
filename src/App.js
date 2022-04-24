@@ -5,6 +5,7 @@ import Nav from './Navigation/Nav';
 import Header from './Header/Header';
 import Products from './Products/Products';
 import Cart from './Cart/Cart';
+import Footer from './Footer/Footer'
 
 import {CartToggleContext,CartItemQuantityContext,CartItemDataContext} from './Helper/Context'
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Cart />
           <Header/>
           <Products productData={ProductData} />
+          <Footer/>
         </div>  
      </CartItemQuantityContext.Provider> 
      </CartToggleContext.Provider> 
