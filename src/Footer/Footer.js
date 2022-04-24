@@ -1,7 +1,10 @@
 import React from 'react'
+import {FaTwitter} from 'react-icons/fa'
+
+
+
 import './Footer.css'
 import FooterImage from '../assets/footer_image.png'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
@@ -51,8 +54,8 @@ function Footer() {
                     <h4>Let's Chat</h4>
                     <p>kwikemart@gmail.com</p>
                     <div>
+                        <FaTwitter/>
                     </div>
-
                 </div>
             </div>
         </div>
