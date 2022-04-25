@@ -8,6 +8,8 @@
 
 .header__container--img{
     flex: 2;
+    transition: 1s ease all;
+
 }
 
 .header__container--text--container{
@@ -23,6 +25,7 @@
     text-transform: uppercase;
     font-weight: 900;
     line-height: 3em; 
+    transition: 1s ease all;
     /* value below must change for mobile,etc */
     font-size: 1.2em;
 }
@@ -47,13 +50,20 @@
     .header__container--img--mart{
         position: relative;
         right: -10%;
+        transition: 1s ease all;
+
     }
   }
+ 
   @media only screen and (max-width: 650px) {
     .header__container{
       top:12em;
       margin-bottom: 15em;
-  }
+    }
+    .cart--open {
+      width: 80%;
+    }
+    
   }
 
   @media only screen and (max-width: 550px) {
@@ -76,5 +86,37 @@
       position: relative;
       left: 25%;
       top: -3em;
+      transition: 1s ease all;
+
     }
+  }
+
+  @media only screen and (max-width: 420px) {
+    .header__container--text{
+      font-size: 0.8em;
+      position: relative;
+      left: -3em;
+    }
+    .header__container--img--mart{
+      position: relative;
+      left: 9em;
+      transition: 1s ease all;
+
+    }
+  }
+
+  @media only screen and (max-width: 300px) {
+    .header__container--text{
+      font-size: 0.5em;
+      position: relative;
+      left: -2em;
+      top: -6.9em;
+    }
+    .header__container--img--mart{
+      position: relative;
+      left: 5em;
+      transition: 1s ease all;
+
+    }
+ 
   }
