@@ -6,8 +6,7 @@
         -CART ITEM: duplicates must be removed
         -NAV: search input not working
         -PRODUCTS: pagination, map limit, not working
-        -FOOTER: not built
-
+        -RESPONSIVE: full site needed
 
 
 

@@ -33,7 +33,7 @@ function Footer() {
         <div className='footer--bottom'>
             <div className='footer--bottom--one'>
                 <div className='footer--bottom--one--left'>
-                    <h2>kwik-e-mart</h2>
+                    <h2 className='footer--logo--name'>kwik-e-mart</h2>
                     <p>I'm so glad you came. If I don't increase profits, I'll have to sell Sanjay to the Krusty Burger!</p>
                 </div>
                 <div >

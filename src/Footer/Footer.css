@@ -45,6 +45,12 @@
     /* bottom will be changed to be more responsive */
     font-size: 3em;
 }
+.footer--logo--name{
+    color:#fc0e06;
+    text-transform: uppercase;
+    font-size: 2em;
+    letter-spacing: 3px;
+}
 
 .footer__email--button{
     background-color: transparent;
