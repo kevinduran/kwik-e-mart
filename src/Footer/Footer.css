@@ -1,5 +1,5 @@
 .footer{
-    background-color: rgb(50, 58, 52);
+    background-color: #2c3b30;
     display: flex;
     flex-direction: column;
     padding: 5em;
@@ -8,9 +8,14 @@
 .footer--top{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .footer--top--one{
     width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 4em;
 
 }
 .footer--top--input{
@@ -29,11 +34,16 @@
 }
 .footer--top--word__container--top{
     letter-spacing: 1.5px;
+    padding: 0.5em 0;
+    font-size: 1em;
+    color: rgb(113, 113, 229);
 }
 .footer--top--word__container--bottom{
     letter-spacing: 2px;
-    font-size: 2.5em;
     color: aliceblue;
+    padding: 0.420em 0;
+    /* bottom will be changed to be more responsive */
+    font-size: 3em;
 }
 
 .footer__email--button{
@@ -49,32 +59,70 @@
 
 .footer__email--button--icon{
     color:#70ee3e;
-    font-size: 1.1em;
+    font-size: 1.5em;
 }
 
 
 .footer--top--two{
     width: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    position: relative;
+    top: -25px;
+}
+.footer--bottom--li{
+    padding: 5px;
 }
 .footer--top--image__container{
     width: fit-content;
-   
+    position: relative;
+}
+@keyframes myglow {
+    from {
+        box-shadow: 0px 0px 40px red, 0 0 28px #b678b078;
+    }
+  
+    50% {
+        box-shadow: 0px 0px 100px red, 0 0 100px #b678b078;
+    }
+    to{
+        box-shadow: 0px 0px 40px red, 0 0 28px #b678b078;
+    }
+  }
+  .glowEffect {
+    width: 99px;
+    height: 125px;
+    transform: skewY(-29deg);
+    position: absolute;
+    top: 6%;
+    right: 39%;
+    border-radius: 10%;
+    box-shadow: 0px 0px 40px red, 0 0 28px #b678b078;
+    transition: 1s ease all;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: myglow;
 }
 .footer--top--image{
-    max-width: 400px;
+    max-width: 450px;
 }
 .footer--bottom{
     display: flex;
+    margin-left: 4em;
+
 
 }
 .footer--bottom--one{
     width: 50%;
-
+    display: flex;
+    justify-content: space-between;
+}
+.footer--bottom--one--left{
+    width: 60%;
 }
 .footer--bottom--two{
     width: 50%;
+    display: flex;
+    justify-content: space-around;
 
 }
