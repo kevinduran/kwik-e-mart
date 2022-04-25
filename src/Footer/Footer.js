@@ -58,9 +58,9 @@ function Footer() {
                     <h4 className='footer--bottom--li'>Let's Chat</h4>
                     <p className='footer--bottom--li'>kwikemart@gmail.com</p>
                     <div className='footer--bottom--li'>
-                        <span className=''></span><FaTwitter/>
-                        <FaInstagram/>
-                        <FaEnvelope/>
+                        <span className='footer--social--link'><FaTwitter/></span>
+                        <span className='footer--social--link'><FaInstagram/></span>
+                        <span className='footer--social--link'><FaEnvelope/></span>
                     </div>
                 </div>
             </div>

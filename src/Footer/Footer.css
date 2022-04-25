@@ -60,8 +60,18 @@
 .footer__email--button--icon{
     color:#70ee3e;
     font-size: 1.5em;
+    cursor: po;
 }
-
+.footer--social--link{
+    padding: 15px;
+    color:#70ee3e;
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+}
+.footer--social--link:hover{
+    color:rgb(5, 106, 17)
+}
 
 .footer--top--two{
     width: 50%;
