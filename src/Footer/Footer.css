@@ -86,6 +86,9 @@
     position: relative;
     top: -25px;
 }
+.greenLine{
+    color: #70ee3e;
+}
 .footer--bottom--li{
     padding: 5px;
 }
@@ -132,6 +135,8 @@
     width: 50%;
     display: flex;
     justify-content: space-between;
+    padding-right: 5em;
+    margin-right: 3em;
 }
 .footer--bottom--one--left{
     width: 60%;
@@ -141,4 +146,19 @@
     display: flex;
     justify-content: space-around;
 
+}
+
+
+@media only screen and (max-width: 1160px) {
+    .footer--top--word__container--bottom {
+        font-size: 2em;
+        transition: 1s ease all;
+    }
+    .footer--top--image {
+        max-width: 350px;
+    }
+    .glowEffect {
+        width: 77px;
+        height: 103px;
+    }
 }
