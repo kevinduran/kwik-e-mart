@@ -56,3 +56,25 @@
   }
   }
 
+  @media only screen and (max-width: 550px) {
+    .header__container{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10em;
+    }
+    .header__container--text--container {
+      padding-bottom: 0;
+  }
+    .header__container--text {
+      font-size: 1em;
+      position: relative;
+      top: -3em;
+      font-size: 1.3em;
+    }
+    .header__container--img--mart{
+      width: 50%;
+      position: relative;
+      left: 25%;
+      top: -3em;
+    }
+  }
