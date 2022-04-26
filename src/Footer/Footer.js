@@ -34,23 +34,22 @@ function Footer() {
             <div className='footer--bottom--one'>
                 <div className='footer--bottom--one--left'>
                     <h2 className='footer--logo--name'>kwik<span className='greenLine'>-</span>e<span className='greenLine'>-</span>mart</h2>
-                    <p>I'm so glad you came. If I don't increase profits, I'll have to sell Sanjay to the Krusty Burger!</p>
                 </div>
                 <div >
                     <ul>
-                        <li className='footer--bottom--li'>About</li>
-                        <li className='footer--bottom--li'>Jobs</li>
-                        <li className='footer--bottom--li'>Docs</li>
+                        <li className='footer--bottom--li green'>About</li>
+                        <li className='footer--bottom--li green'>Jobs</li>
+                        <li className='footer--bottom--li green'>Docs</li>
                     </ul>
 
                 </div>
             </div>
             <div className='footer--bottom--two'>
                 <div>
-                    <ul>
-                        <li className='footer--bottom--li'>Terms and Conditions</li>
-                        <li className='footer--bottom--li'>Privacy Policy</li>
-                        <li className='footer--bottom--li'>Cookie Policy</li>
+                    <ul className='footer--bottom--li--ul'>
+                        <li className='footer--bottom--li green'>Terms and Conditions</li>
+                        <li className='footer--bottom--li green'>Privacy Policy</li>
+                        <li className='footer--bottom--li green'>Cookie Policy</li>
                     </ul>
 
                 </div>

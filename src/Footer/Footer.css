@@ -122,6 +122,12 @@
     animation-iteration-count: infinite;
     animation-name: myglow;
 }
+.green{
+    cursor: pointer;
+}
+.green:hover{
+    color: #70ee3e;
+}
 .footer--top--image{
     max-width: 450px;
 }
@@ -130,6 +136,10 @@
     margin-left: 4em;
 
 
+}
+.footer--bottom--li--ul{
+    position:relative;
+    top:1em;
 }
 .footer--bottom--one{
     width: 50%;
@@ -161,4 +171,50 @@
         width: 77px;
         height: 103px;
     }
+}
+
+@media only screen and (max-width: 860px) {
+    .footer--top{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .footer--top--one{
+        position: relative;
+        width: 115%;
+        left: 10%;
+        
+    }
+    .footer--top--image__container{
+        position: relative;
+        top: 1.5em;
+    }
+    .footer--top--image{
+        max-width: 250px;
+    }
+    .glowEffect {
+        width: 48px;
+        height: 73px;
+        right: 40%;
+    }
+
+    .footer--bottom--one{
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        
+    }
+    .footer--logo--name{
+        font-size: 1.5em;
+    }
+    .footer--bottom--two{
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        
+    }
+    
 }
