@@ -226,10 +226,7 @@
     .footer--bottom--two--item{
         margin-top: 1.5em;
     }
-    .footer--social--link{
-        margin:0 1.5em;
-        font-size: 1.1em;
-    }
+    
     
 }
 
@@ -246,6 +243,10 @@
     .footer--bottom--two{
         text-align: center;
     }
+    .footer--social--link{
+        margin:0 1.5em;
+        font-size: 1.1em;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -259,6 +260,9 @@
     }
     .footer--bottom--two--item{
         margin-top: 25px;
+    }
+    .footer--social--link{
+        margin:0 0.69em;
     }
    
 }
