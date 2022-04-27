@@ -46,12 +46,9 @@ function Footer() {
             </div>
             <div className='footer--bottom--two'>
                 <div>
-                    <ul className='footer--bottom--li--ul'>
                         <li className='footer--bottom--li green'>Terms and Conditions</li>
                         <li className='footer--bottom--li green'>Privacy Policy</li>
                         <li className='footer--bottom--li green'>Cookie Policy</li>
-                    </ul>
-
                 </div>
                 <div>
                     <h4 className='footer--bottom--li'>Let's Chat</h4>

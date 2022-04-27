@@ -18,7 +18,7 @@ function Nav() {
             <img className='logo__container--img' alt="store logo" src={logo}></img> 
         </div>
         <div className='input__container'>
-            <input className='input__container--input' placeholder='search products'></input>
+            <input className='input__container--input' placeholder='search products' /*---value=''---*/ ></input>
             <button className='input__container--button' type="button">search</button>
         </div>
         <div className='cart__container'>
