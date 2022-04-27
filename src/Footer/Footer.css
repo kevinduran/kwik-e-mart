@@ -28,7 +28,7 @@
 .footer--top--input__container{
     border-bottom:2px solid rgb(180, 187, 188);
     border-radius: 1px;
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
 }
@@ -89,7 +89,7 @@
 .greenLine{
     color: #70ee3e;
 }
-.footer--bottom--li{
+.footer--bottom--list{
     padding: 5px;
 }
 .footer--top--image__container{
@@ -122,12 +122,7 @@
     animation-iteration-count: infinite;
     animation-name: myglow;
 }
-.green{
-    cursor: pointer;
-}
-.green:hover{
-    color: #70ee3e;
-}
+
 .footer--top--image{
     max-width: 450px;
 }
@@ -140,25 +135,19 @@
 .footer--bottom--one{
     width: 50%;
     display: flex;
-    justify-content: space-between;
-    padding-right: 5em;
-    margin-right: 3em;
-    border: 1px solid red;
+    justify-content: space-around;
 
 }
-.footer--bottom--one--left{
-    width: 60%;
-    border: 1px solid red;
 
+.footer--bottom--one--item{
+    text-align: center;
 }
 .footer--bottom--two{
     width: 50%;
     display: flex;
     justify-content: space-around;
-    border: 1px solid red;
-
-
 }
+
 
 
 @media only screen and (max-width: 1160px) {
@@ -184,9 +173,22 @@
     }
     .footer--top--one{
         position: relative;
-        width: 115%;
-        left: 10%;
+        width: 100%;
+        left: 0;
+        margin-left: 0;
         
+    }
+   .footer--top--word__container{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   .footer--top--word__container--small{
+       width: 80%;
+   }
+    .footer--top--input__container{
+        margin: 0 auto;
     }
     .footer--top--image__container{
         position: relative;
@@ -200,12 +202,13 @@
         height: 73px;
         right: 40%;
     }
-
+    .footer--bottom{
+        margin-left: 0;
+    }
     .footer--bottom--one{
         flex-direction: column;
         width: 100%;
-        padding: 0;
-        margin: 0;
+
         
     }
     .footer--logo--name{
@@ -216,7 +219,37 @@
         width: 100%;
         padding: 0;
         margin: 0;
-        
     }
     
 }
+
+@media only screen and (max-width: 650px) {
+    .footer{
+        padding: 1em;
+    }
+    .footer--bottom{
+        flex-direction: column;
+    }
+    .footer--logo--name{
+        text-align: center;
+    }
+    .footer--bottom--two{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .footer--top--one{
+        left:0;
+        width:100%;
+
+    }
+    .footer--top--word__container--bottom{
+        font-size: 1.5em;
+    }
+    .footer--bottom--two--item{
+        margin-top: 25px;
+    }
+   
+}
+
