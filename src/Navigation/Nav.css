@@ -103,7 +103,7 @@ nav{
 
 @media only screen and (max-width: 650px) {
     nav{
-        height: 18vh;
+        height: 15vh;
     }
     .cart__container{
         position: relative;
@@ -130,3 +130,4 @@ nav{
     
     
   }
+
