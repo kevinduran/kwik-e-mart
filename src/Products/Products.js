@@ -12,15 +12,15 @@ function Products(productData) {
   const {searchTerm,setSearchTerm} = useContext(ProductsFilterContext)
 
 
-  // val.itemName.toLowerCase().incudes(searchTerm.toLowerCase())
+  
 
   return (
     <div className='product__card__container'>
       {productData.productData.filter((val)=> {
         if(searchTerm == ''){
-          console.log(productData.spice(0,3))
           return val
-
+        }else if (val.itemName.toLowerCase().includes(searchTerm.toLowerCase())){
+          return val
         }
       }).map((product,index)=>{
         return (
