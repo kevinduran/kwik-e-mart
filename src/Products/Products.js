@@ -1,20 +1,28 @@
 import React,{useContext} from 'react'
 import './Products.css'
 
-import{CartToggleContext, CartItemDataContext} from '../Helper/Context'
+import{CartToggleContext, CartItemDataContext,ProductsFilterContext} from '../Helper/Context'
+import { getValue } from '@testing-library/user-event/dist/utils'
 
 
 function Products(productData) {
 
   const {cartOpen,setCartOpen} = useContext(CartToggleContext)
   const {cartItemData,setCartItemData} = useContext(CartItemDataContext)
+  const {searchTerm,setSearchTerm} = useContext(ProductsFilterContext)
 
 
-
+  // val.itemName.toLowerCase().incudes(searchTerm.toLowerCase())
 
   return (
     <div className='product__card__container'>
-      {productData.productData.map((product,index)=>{
+      {productData.productData.filter((val)=> {
+        if(searchTerm == ''){
+          console.log(productData.spice(0,3))
+          return val
+
+        }
+      }).map((product,index)=>{
         return (
             //because flexbox & width:25%.use index values of 4
             index<28 &&
