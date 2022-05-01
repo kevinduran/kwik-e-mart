@@ -1,4 +1,4 @@
-import React,{useContext,useEffect} from 'react'
+import React,{useContext} from 'react'
 import './Products.css'
 
 import{CartToggleContext, CartItemDataContext,ProductsFilterContext} from '../Helper/Context'
@@ -48,7 +48,7 @@ function Products(productData) {
                   onClick={()=>{
                      return ( 
                         setCartOpen(true),
-                        setCartItemData([...cartItemData,{itemName:product.itemName, price:product.price, imageLink:product.imageLink, itemCategory:product.itemCategory}]) 
+                        setCartItemData([...cartItemData,{itemName:product.itemName, price:product.price, imageLink:product.imageLink, itemCategory:product.itemCategory, itemQuantity:1}]) 
                       )}} className='product__card--button'>
                 add to cart</button>
               </div>
