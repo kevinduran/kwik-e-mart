@@ -22,7 +22,6 @@ function Nav() {
         </div>
         <div className='input__container'>
             <input className='input__container--input' placeholder='search products' onChange={event=>{return (setSearchTerm(event.target.value),console.log(searchTerm))}} ></input>
-            <button className='input__container--button' type="button" >search</button>
         </div>
         <div className='cart__container'>
             <button onClick={()=>setCartOpen(true)} className="cart__container--logo--button"><FontAwesomeIcon icon={faCartShopping} className='cart__container--logo--i' /></button>

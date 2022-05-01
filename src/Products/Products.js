@@ -11,7 +11,8 @@ function Products(productData) {
   const {cartItemData,setCartItemData} = useContext(CartItemDataContext)
   const {searchTerm,setSearchTerm} = useContext(ProductsFilterContext)
 
-
+  
+  
   
 
   return (
@@ -23,12 +24,16 @@ function Products(productData) {
           return val
         }
       }).map((product,index)=>{
+        
         return (
             //because flexbox & width:25%.use index values of 4
             index<28 &&
             <div className='product__card'>
               <div className='product__card--section__container product__card--image__container'>
-                <img src={product.imageLink}/>
+                <img
+                  src={product.imageLink }
+                  // onError={} this is how you begin to fix this   
+                />
               </div>
               <div className='product__card--section__container product__card--info__container'>
                 <p>{product.itemName}</p>
