@@ -1,9 +1,8 @@
-import React,{useContext} from 'react'
+import React,{useContext,useEffect} from 'react'
 import './Products.css'
 
 import{CartToggleContext, CartItemDataContext,ProductsFilterContext} from '../Helper/Context'
 import { getValue } from '@testing-library/user-event/dist/utils'
-
 
 function Products(productData) {
 
@@ -11,7 +10,10 @@ function Products(productData) {
   const {cartItemData,setCartItemData} = useContext(CartItemDataContext)
   const {searchTerm,setSearchTerm} = useContext(ProductsFilterContext)
 
-  
+   
+      const handleBrokenImage = (event) => {
+        event.target.src = 'https://askleo.askleomedia.com/wp-content/uploads/2004/06/no_image-300x245.jpg'
+      }
   
   
 
@@ -24,15 +26,16 @@ function Products(productData) {
           return val
         }
       }).map((product,index)=>{
-        
+         
         return (
             //because flexbox & width:25%.use index values of 4
             index<28 &&
             <div className='product__card'>
               <div className='product__card--section__container product__card--image__container'>
                 <img
+                  className='product__card--image'
                   src={product.imageLink }
-                  // onError={} this is how you begin to fix this   
+                  onError={handleBrokenImage}  
                 />
               </div>
               <div className='product__card--section__container product__card--info__container'>

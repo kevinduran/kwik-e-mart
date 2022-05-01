@@ -13,6 +13,14 @@ function Cart() {
   const {itemQuantity,setItemQuantity} = useContext(CartItemQuantityContext)
   const {cartItemData,setCartItemData} = useContext(CartItemDataContext)
 
+
+  const handleBrokenImage = (event) => {
+    event.target.src = 'https://askleo.askleomedia.com/wp-content/uploads/2004/06/no_image-300x245.jpg'
+  }
+
+
+
+
   return (
     <div className={cartOpen?'cart--open':'cart--closed'}>
         
@@ -38,7 +46,7 @@ function Cart() {
                 return (
                     <div className='cart--open--bottom__item'>   
                             <div className='cart--open__item--image__container'>
-                                <img className='cart--open__item--image' src={data.imageLink}/>
+                                <img className='cart--open__item--image' src={data.imageLink} onError={handleBrokenImage} />
                             </div>
                             <div className='cart--open__item--info__container'>
                                 <div className='cart__item--info--top'>

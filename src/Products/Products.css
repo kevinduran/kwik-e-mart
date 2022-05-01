@@ -16,6 +16,9 @@
     position: relative;
     color:rgb(89, 86, 86);
 }
+.product__card--image{
+    /* border: 1px solid red; */
+}
 .product__card--info--price{
     color: #bb0001;
     padding-top: 6.9420px;
