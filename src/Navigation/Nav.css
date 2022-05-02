@@ -1,41 +1,54 @@
 nav{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10vh;
-    padding: 0 1.5em;
-    overflow: hidden;
     position: relative;
     background: linear-gradient(to top, #66bc34f9,#f2eeee 70%);
     position: fixed;
     width: 100%;  
     z-index: 100;  
+    flex-direction: column;
+    height: 13vh;
 }
 
+.nav--top{
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    height: 65%;
+    width: 100%;
+}
+
+
 .logo__container{
-    flex: 1;
     height: 100%;
     display: flex;
     align-items: center;
+    border: 1px solid ;
+    width: 25%;
     
 }
 
 .logo__container--img{
-    width: 50%;
+    width:65%;
     min-width: 130px;
     max-width: 200px;
     cursor: pointer;
     transition: 0.5s ease all;
 }
 .input__container{
-    width: 50%;
     margin: 0 auto;
+    border: 1px solid ;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+
 }
 .input__container--input{
     border:none;
     border-radius: 5px;
     outline: none;
-    width: 100%;
+    width: 60%;
     height: 3em;
     transition: 0.5s ease all;
     padding-left: 10px;
@@ -43,12 +56,16 @@ nav{
 }
 
 .cart__container{
-    flex: 1;
+    border: 1px solid blue;
     position: relative;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 .cart__container--logo--button{
     position: relative;
-    left:85%;
+    left:75%;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -62,6 +79,25 @@ nav{
     color:#0165fe;
     font-size: 1.4em;
     padding: 10px;
+}
+
+.nav--bottom{
+    border: 1px solid blue;
+    height: 35%;
+    width: 100%;
+}
+
+.nav--bottom__button{
+    border: 1px solid black;
+    background-color: transparent;
+    width:100%;
+    height: 100%;
+    color: #0165fe;
+    transition: 0.5s ease all;
+    cursor: pointer;
+}
+.nav--bottom__button:hover{
+    background-color: rgb(11, 94, 11);
 }
 
 
