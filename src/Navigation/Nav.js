@@ -6,10 +6,10 @@ import ProductData from '../products.json'
 
 import './Nav.css'
 
-import{CartToggleContext,CartItemDataContext, ProductsFilterContext} from '../Helper/Context'
+import{CartToggleContext,CartItemDataContext, ProductsFilterContext,CategoryToggleContext} from '../Helper/Context'
 
 function Nav() {
-
+  const {categoryOpen,setCategoryOpen} = useContext(CategoryToggleContext)  
   const {cartOpen,setCartOpen} = useContext(CartToggleContext)
   const {cartItemData,setCartItemData} = useContext(CartItemDataContext)
   const {searchTerm,setSearchTerm} = useContext(ProductsFilterContext)
@@ -30,12 +30,14 @@ function Nav() {
         </div>
         
         <div className='nav--bottom'>
-            <button className="nav--bottom__button">
+            <button className="nav--bottom__button"  onClick={()=>setCategoryOpen(!categoryOpen)} >
                 <p>search category name</p>
                 <p><FontAwesomeIcon icon={faArrowDown}  /></p>
             </button>
         </div>
-
+        <div className={categoryOpen?'category__modal--open':'category__modal--closed'}>
+            
+        </div>
     </nav>
   )
 }

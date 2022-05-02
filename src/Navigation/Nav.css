@@ -96,6 +96,28 @@ nav{
     color: rgb(243, 238, 238);
 }
 
+.category__modal--closed{
+    height: 55vh;
+    width: 100%;
+    position: absolute;
+    top: -40em;
+    left: 0;
+    background: linear-gradient(to top, #66bc34f9,#f2eeee 70%);
+    z-index: -1;
+    transition: 0.5s ease all;
+}
+.category__modal--open{
+    height: 55vh;
+    width: 100%;
+    position: absolute;
+    top: 0em;
+    left: 0;
+    background: linear-gradient(to top, #66bc34f9,#f2eeee 70%);
+    z-index: -1;
+    transition: 0.5s ease all;
+
+}
+
 
 
 @media only screen and (max-width: 900px) {

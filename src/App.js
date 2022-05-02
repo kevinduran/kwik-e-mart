@@ -7,9 +7,9 @@ import Products from './Products/Products';
 import Cart from './Cart/Cart';
 import Footer from './Footer/Footer'
 
-import {CartToggleContext,CartItemQuantityContext,CartItemDataContext , ProductsFilterContext} from './Helper/Context'
+import {CartToggleContext,CartItemQuantityContext,CartItemDataContext , ProductsFilterContext, CategoryToggleContext} from './Helper/Context'
 function App() {
-
+  const [categoryOpen, setCategoryOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
   const [itemQuantity,setItemQuantity] = useState(1);
   const [cartItemData, setCartItemData] =  useState([]);
@@ -17,6 +17,7 @@ function App() {
   return (
     <ProductsFilterContext.Provider value={{searchTerm,setSearchTerm}}>
     <CartItemDataContext.Provider value={{cartItemData,setCartItemData}}>
+    <CategoryToggleContext.Provider value={{categoryOpen, setCategoryOpen}}>
     <CartToggleContext.Provider value={{cartOpen, setCartOpen}}>
     <CartItemQuantityContext.Provider value={{itemQuantity,setItemQuantity}}>
         <div className="App">
@@ -28,6 +29,7 @@ function App() {
         </div>  
      </CartItemQuantityContext.Provider> 
      </CartToggleContext.Provider> 
+     </CategoryToggleContext.Provider> 
      </CartItemDataContext.Provider>
      </ProductsFilterContext.Provider>
   );
