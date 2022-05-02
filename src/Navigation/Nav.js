@@ -36,7 +36,19 @@ function Nav() {
             </button>
         </div>
         <div className={categoryOpen?'category__modal--open':'category__modal--closed'}>
-            
+            <div className='category__modal--item__container'>
+                <button className='category__modal--item'>IPAs</button>
+                <button className='category__modal--item'>IPAs</button>
+                <button className='category__modal--item'>IPAs</button>
+                <button className='category__modal--item'>IPAs</button>
+                <button className='category__modal--item'>IPAs</button>
+                <button className='category__modal--item'>IPAs</button>
+                <button className='category__modal--item'>IPAs</button>
+                <button className='category__modal--item'>IPAs</button>
+                <button className='category__modal--item'>IPAs</button>
+                <button className='category__modal--item'>IPAs</button>
+
+            </div>   
         </div>
     </nav>
   )

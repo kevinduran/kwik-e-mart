@@ -104,7 +104,8 @@ nav{
     left: 0;
     background: linear-gradient(to top, #66bc34f9,#f2eeee 70%);
     z-index: -1;
-    transition: 0.5s ease all;
+    transition: 0.3s ease all;
+    overflow: hidden;
 }
 .category__modal--open{
     height: 55vh;
@@ -115,7 +116,25 @@ nav{
     background: linear-gradient(to top, #66bc34f9,#f2eeee 70%);
     z-index: -1;
     transition: 0.5s ease all;
+    
 
+}
+.category__modal--item__container{
+    position: relative;
+    top: 8em;
+    height: 69%;
+    overflow: scroll;
+}
+.category__modal--item{
+    height: 20%;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    transition: 0.3s ease all;
+    cursor: pointer;
+}
+.category__modal--item:hover{
+    background-color:rgb(58, 194, 58);
 }
 
 
