@@ -5,3 +5,4 @@ export const CartToggleContext = createContext({});
 export const CategoryToggleContext = createContext({});
 export const CartItemDataContext = createContext({});
 export const ProductsFilterContext = createContext({})
+export const ProductsCategoryContext = createContext({})

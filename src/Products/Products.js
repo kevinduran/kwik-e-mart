@@ -1,7 +1,7 @@
 import React,{useContext} from 'react'
 import './Products.css'
 
-import{CartToggleContext, CartItemDataContext,ProductsFilterContext} from '../Helper/Context'
+import{CartToggleContext, CartItemDataContext,ProductsFilterContext,ProductsCategoryContext} from '../Helper/Context'
 import { getValue } from '@testing-library/user-event/dist/utils'
 
 function Products(productData) {
@@ -9,7 +9,7 @@ function Products(productData) {
   const {cartOpen,setCartOpen} = useContext(CartToggleContext)
   const {cartItemData,setCartItemData} = useContext(CartItemDataContext)
   const {searchTerm,setSearchTerm} = useContext(ProductsFilterContext)
-
+  const {categoryTerm, setCategoryTerm} = useContext(ProductsCategoryContext)
    
       const handleBrokenImage = (event) => {
         event.target.src = 'https://askleo.askleomedia.com/wp-content/uploads/2004/06/no_image-300x245.jpg'
@@ -22,15 +22,22 @@ function Products(productData) {
       {productData.productData.filter((val)=> {
         if(searchTerm == ''){
           return val
-        }else if (val.itemName.toLowerCase().includes(searchTerm.toLowerCase())){
+        }else if (val.itemName.toLowerCase().includes(searchTerm.toLowerCase()) ){
           return val
         }
+      }).filter((val)=> {
+        if(categoryTerm == ''){
+          return val
+        }else if (val.itemCategory.toLowerCase().includes(categoryTerm.toLowerCase()) ){
+          return val
+        }
+  
       }).map((product,index)=>{
-         
-        return (
-            //because flexbox & width:25%.use index values of 4
-            index<28 &&
-            <div className='product__card'>
+        
+      
+          return (
+                    
+            index<28 && <div className='product__card'>
               <div className='product__card--section__container product__card--image__container'>
                 <img
                   className='product__card--image'
@@ -52,10 +59,12 @@ function Products(productData) {
                       )}} className='product__card--button'>
                 add to cart</button>
               </div>
-            </div>
+            </div>         
            
         )
-      })}
+        
+      })
+      }
     </div>
   )
 }

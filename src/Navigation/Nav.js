@@ -5,13 +5,14 @@ import { faCartShopping, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
 import './Nav.css'
 
-import{CartToggleContext,CartItemDataContext, ProductsFilterContext,CategoryToggleContext} from '../Helper/Context'
+import{CartToggleContext,CartItemDataContext, ProductsFilterContext,CategoryToggleContext,ProductsCategoryContext} from '../Helper/Context'
 
 function Nav() {
   const {categoryOpen,setCategoryOpen} = useContext(CategoryToggleContext)  
   const {cartOpen,setCartOpen} = useContext(CartToggleContext)
   const {cartItemData,setCartItemData} = useContext(CartItemDataContext)
   const {searchTerm,setSearchTerm} = useContext(ProductsFilterContext)
+  const {categoryTerm, setCategoryTerm} = useContext(ProductsCategoryContext)
 
  const categories = [
     'IPA',
@@ -100,7 +101,7 @@ function Nav() {
                 <img className='logo__container--img' alt="store logo" src={logo}></img> 
             </div>
             <div className='input__container'>
-                <input className='input__container--input' placeholder='search product name' onChange={event=>{return (setSearchTerm(event.target.value),console.log(searchTerm))}} ></input>
+                <input className='input__container--input' placeholder='search product name' onChange={event=>{return (setSearchTerm(event.target.value),setCategoryTerm(''))}} ></input>
             </div>
             <div className='cart__container'>
                 <button onClick={()=>setCartOpen(true)} className="cart__container--logo--button"><FontAwesomeIcon icon={faCartShopping} className='cart__container--logo--i' /></button>
@@ -117,7 +118,11 @@ function Nav() {
             <div className='category__modal--item__container'>
                 {categories.map((name)=>{
                     return(
-                        <button className='category__modal--item'>{name}</button>
+                        <button className='category__modal--item' onClick={()=>{
+                            setCategoryTerm(name);
+                            setSearchTerm('');
+                            setCategoryOpen(false)
+                        }}>{name}</button>
                     )
                 })}
             </div>   

@@ -187,8 +187,14 @@ nav{
         position: relative;
         left: 35%;
     }
-    
-  }
+    .category__modal--item__container{
+        top: 10em;
+    }
+    .category__modal--open{
+        height: 69vh;
+    }    
+}
+  
 
   @media only screen and (max-width: 450px) {
     .cart__container--logo--button{
