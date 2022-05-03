@@ -9,6 +9,7 @@ import Footer from './Footer/Footer'
 
 import {CartToggleContext,CartItemQuantityContext,CartItemDataContext , ProductsFilterContext, CategoryToggleContext} from './Helper/Context'
 function App() {
+
   const [categoryOpen, setCategoryOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
   const [itemQuantity,setItemQuantity] = useState(1);
@@ -21,7 +22,7 @@ function App() {
     <CartToggleContext.Provider value={{cartOpen, setCartOpen}}>
     <CartItemQuantityContext.Provider value={{itemQuantity,setItemQuantity}}>
         <div className="App">
-          <Nav/>
+          <Nav />
           <Cart />
           <Header/>
           <Products productData={ProductData} />
