@@ -37,7 +37,7 @@ function Products(productData) {
       
           return (
                     
-            index<28 && <div className='product__card'>
+            index<16 && <div className='product__card'>
               <div className='product__card--section__container product__card--image__container'>
                 <img
                   className='product__card--image'
