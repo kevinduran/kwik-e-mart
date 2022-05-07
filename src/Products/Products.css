@@ -45,3 +45,10 @@
 .product__card--button:hover{
     background-color: rgb(240, 45, 45);
 }
+@media only screen and (max-width: 420px) {
+    .product__card {
+        width: 40%;
+        margin: 10px 10px;
+        min-width: 100px;
+    }
+}
