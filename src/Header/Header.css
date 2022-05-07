@@ -28,6 +28,7 @@
     transition: 1s ease all;
     /* value below must change for mobile,etc */
     font-size: 1.2em;
+    font-family: 'Bowlby One SC', cursive;
 }
 
 .header__container--text--red{
@@ -38,7 +39,7 @@
 
 @media only screen and (min-width: 1000px) {
     .header__container--text {
-      font-size: 1.69em;
+      font-size: 1.8em;
     }
   }
 
