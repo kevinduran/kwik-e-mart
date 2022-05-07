@@ -23,8 +23,6 @@ function Products(productData) {
           return val
         }else if (val.itemName.toLowerCase().includes(searchTerm.toLowerCase()) ){
           return val
-        }else{
-          return val
         }
         
         
@@ -32,8 +30,6 @@ function Products(productData) {
         if(categoryTerm === ''){
           return val
         }else if (val.itemCategory.toLowerCase().includes(categoryTerm.toLowerCase()) ){
-          return val
-        }else{
           return val
         }
   
