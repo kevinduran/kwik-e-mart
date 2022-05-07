@@ -18,21 +18,23 @@ function Products(productData) {
 
   return (
     <div className='product__card__container'>
-      {productData.productData.filter((val)=> {
+      
+      {// eslint-disable-next-line
+      productData.productData.filter((val)=> {
+        
         if(searchTerm === ''){
           return val
         }else if (val.itemName.toLowerCase().includes(searchTerm.toLowerCase()) ){
           return val
         }
-        
-        
+        // eslint-disable-next-line
       }).filter((val)=> {
         if(categoryTerm === ''){
           return val
         }else if (val.itemCategory.toLowerCase().includes(categoryTerm.toLowerCase()) ){
           return val
         }
-  
+  // eslint-disable-next-line
       }).map((product,index)=>{
         
       
