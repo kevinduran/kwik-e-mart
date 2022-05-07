@@ -11,7 +11,7 @@ function Nav() {
   const {categoryOpen,setCategoryOpen} = useContext(CategoryToggleContext)  
   const {setCartOpen} = useContext(CartToggleContext)
   const {setSearchTerm} = useContext(ProductsFilterContext)
-  const {categoryTerm, setCategoryTerm} = useContext(ProductsCategoryContext)
+  const {setCategoryTerm} = useContext(ProductsCategoryContext)
 
  const categories = [
     'IPA',
