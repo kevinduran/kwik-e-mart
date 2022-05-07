@@ -13,7 +13,7 @@ function Header() {
             </div>
         </div>
         <div className='header__container--img'>
-            <img className='header__container--img--mart' src={mart}/>
+            <img className='header__container--img--mart' src={mart} alt='liquore store'/>
         </div>
         
     </div>

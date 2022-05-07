@@ -2,14 +2,13 @@ import React,{useContext} from 'react'
 import './Products.css'
 
 import{CartToggleContext, CartItemDataContext,ProductsFilterContext,ProductsCategoryContext} from '../Helper/Context'
-import { getValue } from '@testing-library/user-event/dist/utils'
 
 function Products(productData) {
 
-  const {cartOpen,setCartOpen} = useContext(CartToggleContext)
+  const {setCartOpen} = useContext(CartToggleContext)
   const {cartItemData,setCartItemData} = useContext(CartItemDataContext)
-  const {searchTerm,setSearchTerm} = useContext(ProductsFilterContext)
-  const {categoryTerm, setCategoryTerm} = useContext(ProductsCategoryContext)
+  const {searchTerm} = useContext(ProductsFilterContext)
+  const {categoryTerm} = useContext(ProductsCategoryContext)
    
       const handleBrokenImage = (event) => {
         event.target.src = 'https://askleo.askleomedia.com/wp-content/uploads/2004/06/no_image-300x245.jpg'
@@ -20,13 +19,14 @@ function Products(productData) {
   return (
     <div className='product__card__container'>
       {productData.productData.filter((val)=> {
-        if(searchTerm == ''){
+        if(searchTerm === ''){
           return val
         }else if (val.itemName.toLowerCase().includes(searchTerm.toLowerCase()) ){
           return val
         }
+        
       }).filter((val)=> {
-        if(categoryTerm == ''){
+        if(categoryTerm === ''){
           return val
         }else if (val.itemCategory.toLowerCase().includes(categoryTerm.toLowerCase()) ){
           return val
@@ -42,7 +42,8 @@ function Products(productData) {
                 <img
                   className='product__card--image'
                   src={product.imageLink }
-                  onError={handleBrokenImage}  
+                  onError={handleBrokenImage} 
+                  alt={product.itemName} 
                 />
               </div>
               <div className='product__card--section__container product__card--info__container'>

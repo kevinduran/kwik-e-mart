@@ -92,7 +92,7 @@
 .cart--open--bottom{
     text-align: center;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     flex-direction: column;    
 }
 .cart--open--bottom__item{

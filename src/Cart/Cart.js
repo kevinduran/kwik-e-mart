@@ -1,6 +1,5 @@
 import React,{useContext} from 'react'
 import './Cart.css'
-import Apu from '../assets/apu.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowTurnRight, faTrashCan } from '@fortawesome/free-solid-svg-icons'
@@ -46,7 +45,7 @@ function Cart() {
                 return (
                     <div className='cart--open--bottom__item'>   
                             <div className='cart--open__item--image__container'>
-                                <img className='cart--open__item--image' src={data.imageLink} onError={handleBrokenImage} />
+                                <img className='cart--open__item--image' src={data.imageLink} onError={handleBrokenImage} alt={data.itemName}/>
                             </div>
                             <div className='cart--open__item--info__container'>
                                 <div className='cart__item--info--top'>
@@ -57,7 +56,7 @@ function Cart() {
                                         <button 
                                             onClick={()=>{
                                                 let newList = cartItemData.filter((item)=>{
-                                                        return (item.itemName != data.itemName)
+                                                        return (item.itemName !== data.itemName)
                                                 })
                                                 setCartItemData(newList)
                                                 console.log(newList)

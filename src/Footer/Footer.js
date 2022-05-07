@@ -30,7 +30,7 @@ function Footer() {
             <div className='footer--top--two'>
                 <div className='footer--top--image__container'>
                     <div className='glowEffect'></div>
-                    <img className='footer--top--image' src={FooterImage} />
+                    <img className='footer--top--image' src={FooterImage}  alt='liquor store night'/>
                 </div>
             </div>
         </div>

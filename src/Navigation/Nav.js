@@ -5,13 +5,12 @@ import { faCartShopping, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
 import './Nav.css'
 
-import{CartToggleContext,CartItemDataContext, ProductsFilterContext,CategoryToggleContext,ProductsCategoryContext} from '../Helper/Context'
+import{CartToggleContext, ProductsFilterContext,CategoryToggleContext,ProductsCategoryContext} from '../Helper/Context'
 
 function Nav() {
   const {categoryOpen,setCategoryOpen} = useContext(CategoryToggleContext)  
-  const {cartOpen,setCartOpen} = useContext(CartToggleContext)
-  const {cartItemData,setCartItemData} = useContext(CartItemDataContext)
-  const {searchTerm,setSearchTerm} = useContext(ProductsFilterContext)
+  const {setCartOpen} = useContext(CartToggleContext)
+  const {setSearchTerm} = useContext(ProductsFilterContext)
   const {categoryTerm, setCategoryTerm} = useContext(ProductsCategoryContext)
 
  const categories = [
