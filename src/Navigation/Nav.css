@@ -173,6 +173,7 @@ nav{
         height: 1em;
         width: 100%;
         left:0;
+        background-color: red;
     }
     .cart__container{
         top: -20px;
@@ -188,10 +189,10 @@ nav{
         left: 35%;
     }
     .category__modal--item__container{
-        top: 10em;
+        top: 9.5em;
     }
     .category__modal--open{
-        height: 69vh;
+        height: 70vh;
     }    
 }
   
