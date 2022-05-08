@@ -204,6 +204,9 @@
     .cart--open{
         width: 60%;
     }
+    .cart--open__item--image {
+        max-height: 80px;
+    }
 }
 
 @media only screen and (max-width:500px){
