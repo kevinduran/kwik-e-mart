@@ -4,6 +4,16 @@
     justify-content: center;
     margin: 5px;
     padding-bottom: 6.9em;
+    position: relative;
+}
+.product__card__container--info{
+    position: absolute;
+    left: 10%;
+    top:-1%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9em;
+    color: #bb0001;
 }
 
 .product__card{

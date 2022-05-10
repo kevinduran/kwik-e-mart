@@ -5,13 +5,15 @@ import { faCartShopping, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
 import './Nav.css'
 
-import{CartToggleContext, ProductsFilterContext,CategoryToggleContext,ProductsCategoryContext} from '../Helper/Context'
+import{CartToggleContext, ProductsFilterContext,CategoryToggleContext,ProductsCategoryContext,ArrowPositionContext,CategoryMenuNameContext} from '../Helper/Context'
 
 function Nav() {
+  const {arrowPosition,setArrowPosition} = useContext(ArrowPositionContext)  
   const {categoryOpen,setCategoryOpen} = useContext(CategoryToggleContext)  
   const {setCartOpen} = useContext(CartToggleContext)
   const {setSearchTerm} = useContext(ProductsFilterContext)
   const {setCategoryTerm} = useContext(ProductsCategoryContext)
+  const {categoryMenuName,setCategoryMenuName} = useContext(CategoryMenuNameContext)
 
  const categories = [
     'IPA',
@@ -108,9 +110,15 @@ function Nav() {
         </div>
         
         <div className='nav--bottom'>
-            <button className="nav--bottom__button"  onClick={()=>setCategoryOpen(!categoryOpen)} >
-                <p>search category name</p>
-                <p><FontAwesomeIcon icon={faArrowDown}  /></p>
+            <button className="nav--bottom__button"  
+                onClick={()=>{
+                    setCategoryOpen(!categoryOpen);
+                    setArrowPosition(!arrowPosition)
+                    setCategoryMenuName(!categoryMenuName)
+                }}
+            >
+                <p>{categoryMenuName ?'search category name':'close category menu'}</p>
+                <p className={ arrowPosition ? 'nav--bottom--arrow--down':'nav--bottom--arrow--up'}><FontAwesomeIcon icon={faArrowDown}  /></p>
             </button>
         </div>
         <div className={categoryOpen?'category__modal--open':'category__modal--closed'}>

@@ -18,7 +18,7 @@ function Products(productData) {
 
   return (
     <div className='product__card__container'>
-      
+      {/* <p className='product__card__container--info'>* we found 324 total 'candy' products</p> */}
       {// eslint-disable-next-line
       productData.productData.filter((val)=> {
         

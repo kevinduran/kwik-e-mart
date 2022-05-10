@@ -95,6 +95,14 @@ nav{
     background-color: rgb(58, 194, 58);
     color: rgb(243, 238, 238);
 }
+.nav--bottom--arrow--down{
+    transition: 0.5s ease all;
+    transform: rotate(0deg);
+}
+.nav--bottom--arrow--up{
+    transition: 0.5s ease all;
+    transform: rotate(180deg);
+}
 
 .category__modal--closed{
     height: 55vh;
