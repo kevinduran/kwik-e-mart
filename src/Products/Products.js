@@ -10,7 +10,7 @@ function Products(productData) {
   const {searchTerm} = useContext(ProductsFilterContext)
   const {categoryTerm} = useContext(ProductsCategoryContext)
   const {categoryTermAmount,setCategoryTermAmount} = useContext(CategoryTermAmountContext)
-  const {productCardAmountInfo,setProductCardAmountInfo} = useContext(ProductCardAmountInfoContext)
+  const {productCardAmountInfo} = useContext(ProductCardAmountInfoContext)
    
       const handleBrokenImage = (event) => {
         event.target.src = 'https://askleo.askleomedia.com/wp-content/uploads/2004/06/no_image-300x245.jpg'

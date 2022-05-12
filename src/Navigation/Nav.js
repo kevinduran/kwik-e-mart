@@ -14,7 +14,7 @@ function Nav() {
   const {setSearchTerm} = useContext(ProductsFilterContext)
   const {setCategoryTerm} = useContext(ProductsCategoryContext)
   const {categoryMenuName,setCategoryMenuName} = useContext(CategoryMenuNameContext)
-  const {productCardAmountInfo,setProductCardAmountInfo} = useContext(ProductCardAmountInfoContext)
+  const {setProductCardAmountInfo} = useContext(ProductCardAmountInfoContext)
 
  const categories = [
     'IPA',
