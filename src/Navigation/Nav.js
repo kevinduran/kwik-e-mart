@@ -114,8 +114,8 @@ function Nav() {
             <button className="nav--bottom__button"  
                 onClick={()=>{
                     setCategoryOpen(!categoryOpen);
-                    setArrowPosition(!arrowPosition)
-                    setCategoryMenuName(!categoryMenuName)
+                    setArrowPosition(!arrowPosition);
+                    setCategoryMenuName(!categoryMenuName);
                 }}
             >
                 <p>{categoryMenuName ?'open category menu':'close category menu'}</p>

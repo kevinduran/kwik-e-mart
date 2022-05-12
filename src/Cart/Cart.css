@@ -177,6 +177,7 @@
     font-size: 1.2em;
     cursor: pointer;
     border-radius: 3px;
+    color: rgb(76, 74, 74);
 }
 
 .cart__item--quantity--total{
