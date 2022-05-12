@@ -55,10 +55,17 @@
 .product__card--button:hover{
     background-color: rgb(240, 45, 45);
 }
+@media only screen and (max-width: 540px) {
+    .product__card__container--info {
+        top: -0.5%;
+    }
+}
 @media only screen and (max-width: 420px) {
     .product__card {
         width: 43%;
         margin: 10px 10px;
         min-width: 100px;
     }
+    
+    
 }

@@ -7,7 +7,7 @@ import Products from './Products/Products';
 import Cart from './Cart/Cart';
 import Footer from './Footer/Footer'
 
-import {CartToggleContext,CartItemQuantityContext,CartItemDataContext , ProductsFilterContext,ProductsCategoryContext, CategoryToggleContext, ArrowPositionContext, CategoryMenuNameContext} from './Helper/Context'
+import {CartToggleContext,CartItemQuantityContext,CartItemDataContext , ProductsFilterContext,ProductsCategoryContext, CategoryToggleContext, ArrowPositionContext, CategoryMenuNameContext, CategoryTermAmountContext,ProductCardAmountInfoContext} from './Helper/Context'
 function App() {
 
   const [categoryOpen, setCategoryOpen] = useState(false);
@@ -17,10 +17,14 @@ function App() {
   const [itemQuantity,setItemQuantity] = useState(1);
   const [cartItemData, setCartItemData] =  useState([]);
   const [categoryTerm, setCategoryTerm] = useState('');
+  const [categoryTermAmount,setCategoryTermAmount] = useState(0);
   const [searchTerm, setSearchTerm] = useState('');
+  const [productCardAmountInfo,setProductCardAmountInfo] = useState(false)
   return (
     <ProductsCategoryContext.Provider value={{categoryTerm,setCategoryTerm}}>
     <ProductsFilterContext.Provider value={{searchTerm,setSearchTerm}}>
+    <ProductCardAmountInfoContext.Provider value={{productCardAmountInfo,setProductCardAmountInfo}}>
+    <CategoryTermAmountContext.Provider value={{categoryTermAmount,setCategoryTermAmount}}>  
     <CartItemDataContext.Provider value={{cartItemData,setCartItemData}}>
     <CategoryToggleContext.Provider value={{categoryOpen, setCategoryOpen}}>
     <CategoryMenuNameContext.Provider value={{categoryMenuName,setCategoryMenuName}}>
@@ -40,6 +44,8 @@ function App() {
      </CategoryMenuNameContext.Provider>  
      </CategoryToggleContext.Provider>
      </CartItemDataContext.Provider>
+     </CategoryTermAmountContext.Provider>
+     </ProductCardAmountInfoContext.Provider>  
      </ProductsFilterContext.Provider>
      </ProductsCategoryContext.Provider>
   );

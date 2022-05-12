@@ -1,7 +1,7 @@
 import React,{useContext} from 'react'
 import './Products.css'
 
-import{CartToggleContext, CartItemDataContext,ProductsFilterContext,ProductsCategoryContext} from '../Helper/Context'
+import{CartToggleContext, CartItemDataContext,ProductsFilterContext,ProductsCategoryContext,CategoryTermAmountContext,ProductCardAmountInfoContext} from '../Helper/Context'
 
 function Products(productData) {
 
@@ -9,22 +9,25 @@ function Products(productData) {
   const {cartItemData,setCartItemData} = useContext(CartItemDataContext)
   const {searchTerm} = useContext(ProductsFilterContext)
   const {categoryTerm} = useContext(ProductsCategoryContext)
+  const {categoryTermAmount,setCategoryTermAmount} = useContext(CategoryTermAmountContext)
+  const {productCardAmountInfo,setProductCardAmountInfo} = useContext(ProductCardAmountInfoContext)
    
       const handleBrokenImage = (event) => {
         event.target.src = 'https://askleo.askleomedia.com/wp-content/uploads/2004/06/no_image-300x245.jpg'
       }
   
-  
+      let myProductData= productData.productData;
+      let myProductArray = []
 
   return (
     <div className='product__card__container'>
-      {/* <p className='product__card__container--info'>* we found 324 total 'candy' products</p> */}
-      {// eslint-disable-next-line
-      productData.productData.filter((val)=> {
-        
+      {productCardAmountInfo && <p className='product__card__container--info'>* we found {categoryTermAmount} total {categoryTerm} products</p>   }
+      {     
+      // eslint-disable-next-line
+       myProductData.filter((val)=> {        
         if(searchTerm === ''){
           return val
-        }else if (val.itemName.toLowerCase().includes(searchTerm.toLowerCase()) ){
+        }else if (val.itemName.toLowerCase().includes(searchTerm.toLowerCase()) ){   
           return val
         }
         // eslint-disable-next-line
@@ -32,15 +35,17 @@ function Products(productData) {
         if(categoryTerm === ''){
           return val
         }else if (val.itemCategory.toLowerCase().includes(categoryTerm.toLowerCase()) ){
+          myProductArray.push(val)
+          setCategoryTermAmount(myProductArray.length)   
+          //NEED TO SOMEHOW SET TOTAL NUMBER OF CATEGORY ITEMS HERE
+          
           return val
         }
   // eslint-disable-next-line
       }).map((product,index)=>{
-        
-      
           return (
-                    
-            index<16 && <div className='product__card'>
+               
+            index<16 && <div className='product__card' key={product.itemnum}>
               <div className='product__card--section__container product__card--image__container'>
                 <img
                   className='product__card--image'
@@ -59,6 +64,7 @@ function Products(productData) {
                   onClick={()=>{
                      return ( 
                         setCartOpen(true),
+                        //"itemQuantity:1 IS THE KEY TO SOLVING THE CART QUANTITY PROBLEM"
                         setCartItemData([...cartItemData,{itemName:product.itemName, price:product.price, imageLink:product.imageLink, itemCategory:product.itemCategory, itemQuantity:1}]) 
                       )}} className='product__card--button'>
                 add to cart</button>
@@ -67,7 +73,7 @@ function Products(productData) {
            
         )
         
-      })
+      })     
       }
     </div>
   )

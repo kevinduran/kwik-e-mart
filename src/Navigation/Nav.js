@@ -5,7 +5,7 @@ import { faCartShopping, faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
 import './Nav.css'
 
-import{CartToggleContext, ProductsFilterContext,CategoryToggleContext,ProductsCategoryContext,ArrowPositionContext,CategoryMenuNameContext} from '../Helper/Context'
+import{CartToggleContext, ProductsFilterContext,CategoryToggleContext,ProductsCategoryContext,ArrowPositionContext,CategoryMenuNameContext, ProductCardAmountInfoContext} from '../Helper/Context'
 
 function Nav() {
   const {arrowPosition,setArrowPosition} = useContext(ArrowPositionContext)  
@@ -14,6 +14,7 @@ function Nav() {
   const {setSearchTerm} = useContext(ProductsFilterContext)
   const {setCategoryTerm} = useContext(ProductsCategoryContext)
   const {categoryMenuName,setCategoryMenuName} = useContext(CategoryMenuNameContext)
+  const {productCardAmountInfo,setProductCardAmountInfo} = useContext(ProductCardAmountInfoContext)
 
  const categories = [
     'IPA',
@@ -102,7 +103,7 @@ function Nav() {
                 <img className='logo__container--img' alt="store logo" src={logo}></img> 
             </div>
             <div className='input__container'>
-                <input className='input__container--input' placeholder='search product name' onChange={event=>{return (setSearchTerm(event.target.value),setCategoryTerm(''))}} ></input>
+                <input className='input__container--input' placeholder='search product name' onChange={event=>{return (setSearchTerm(event.target.value),setCategoryTerm(''),setProductCardAmountInfo(false))}} ></input>
             </div>
             <div className='cart__container'>
                 <button onClick={()=>setCartOpen(true)} className="cart__container--logo--button"><FontAwesomeIcon icon={faCartShopping} className='cart__container--logo--i' /></button>
@@ -117,7 +118,7 @@ function Nav() {
                     setCategoryMenuName(!categoryMenuName)
                 }}
             >
-                <p>{categoryMenuName ?'search category name':'close category menu'}</p>
+                <p>{categoryMenuName ?'open category menu':'close category menu'}</p>
                 <p className={ arrowPosition ? 'nav--bottom--arrow--down':'nav--bottom--arrow--up'}><FontAwesomeIcon icon={faArrowDown}  /></p>
             </button>
         </div>
@@ -125,9 +126,12 @@ function Nav() {
             <div className='category__modal--item__container'>
                 {categories.map((name)=>{
                     return(
-                        <button className='category__modal--item' onClick={()=>{
+                        <button key={name} className='category__modal--item' onClick={()=>{
+                            setProductCardAmountInfo(true)
                             setCategoryTerm(name);
                             setSearchTerm('');
+                            setArrowPosition(!arrowPosition)
+                            setCategoryMenuName(!categoryMenuName)
                             setCategoryOpen(false)
                         }}>{name}</button>
                     )
