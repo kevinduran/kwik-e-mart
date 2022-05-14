@@ -1,7 +1,7 @@
 import React,{useContext} from 'react'
 import './Products.css'
 
-import{CartToggleContext, CartItemDataContext,ProductsFilterContext,ProductsCategoryContext,CategoryTermAmountContext,ProductCardAmountInfoContext} from '../Helper/Context'
+import{CartToggleContext, CartItemDataContext,ProductsFilterContext,ProductsCategoryContext,CategoryTermAmountContext,ProductCardAmountInfoContext,CartTotalPriceContext} from '../Helper/Context'
 
 function Products(productData) {
 
@@ -11,6 +11,8 @@ function Products(productData) {
   const {categoryTerm} = useContext(ProductsCategoryContext)
   const {categoryTermAmount,setCategoryTermAmount} = useContext(CategoryTermAmountContext)
   const {productCardAmountInfo} = useContext(ProductCardAmountInfoContext)
+  const {cartTotalPrice, setCartTotalPrice} = useContext(CartTotalPriceContext)
+
    
       const handleBrokenImage = (event) => {
         event.target.src = 'https://askleo.askleomedia.com/wp-content/uploads/2004/06/no_image-300x245.jpg'
@@ -65,7 +67,8 @@ function Products(productData) {
                      return ( 
                         setCartOpen(true),
                         //"itemQuantity:1 IS THE KEY TO SOLVING THE CART QUANTITY PROBLEM"
-                        setCartItemData([...cartItemData,{itemName:product.itemName, price:product.price, imageLink:product.imageLink, itemCategory:product.itemCategory, itemQuantity:1}]) 
+                        setCartItemData([...cartItemData,{itemName:product.itemName, price:product.price, imageLink:product.imageLink, itemCategory:product.itemCategory, itemQuantity:1}]), 
+                        setCartTotalPrice([...cartTotalPrice,product.price])
                       )}} className='product__card--button'>
                 add to cart</button>
               </div>

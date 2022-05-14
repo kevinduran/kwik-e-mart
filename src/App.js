@@ -7,7 +7,7 @@ import Products from './Products/Products';
 import Cart from './Cart/Cart';
 import Footer from './Footer/Footer'
 
-import {CartToggleContext,CartItemQuantityContext,CartItemDataContext , ProductsFilterContext,ProductsCategoryContext, CategoryToggleContext, ArrowPositionContext, CategoryMenuNameContext, CategoryTermAmountContext,ProductCardAmountInfoContext} from './Helper/Context'
+import {CartToggleContext,CartItemQuantityContext,CartItemDataContext , ProductsFilterContext,ProductsCategoryContext, CategoryToggleContext, ArrowPositionContext, CategoryMenuNameContext, CategoryTermAmountContext,ProductCardAmountInfoContext,CartTotalPriceContext} from './Helper/Context'
 function App() {
 
   const [categoryOpen, setCategoryOpen] = useState(false);
@@ -18,6 +18,7 @@ function App() {
   const [cartItemData, setCartItemData] =  useState([]);
   const [categoryTerm, setCategoryTerm] = useState('');
   const [categoryTermAmount,setCategoryTermAmount] = useState(0);
+  const [cartTotalPrice,setCartTotalPrice] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [productCardAmountInfo,setProductCardAmountInfo] = useState(false)
   return (
@@ -25,6 +26,7 @@ function App() {
     <ProductsFilterContext.Provider value={{searchTerm,setSearchTerm}}>
     <ProductCardAmountInfoContext.Provider value={{productCardAmountInfo,setProductCardAmountInfo}}>
     <CategoryTermAmountContext.Provider value={{categoryTermAmount,setCategoryTermAmount}}>  
+    <CartTotalPriceContext.Provider value={{cartTotalPrice,setCartTotalPrice}}>
     <CartItemDataContext.Provider value={{cartItemData,setCartItemData}}>
     <CategoryToggleContext.Provider value={{categoryOpen, setCategoryOpen}}>
     <CategoryMenuNameContext.Provider value={{categoryMenuName,setCategoryMenuName}}>
@@ -44,6 +46,7 @@ function App() {
      </CategoryMenuNameContext.Provider>  
      </CategoryToggleContext.Provider>
      </CartItemDataContext.Provider>
+     </CartTotalPriceContext.Provider>
      </CategoryTermAmountContext.Provider>
      </ProductCardAmountInfoContext.Provider>  
      </ProductsFilterContext.Provider>

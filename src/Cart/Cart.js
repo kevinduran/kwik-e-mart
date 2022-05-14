@@ -4,21 +4,18 @@ import './Cart.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowTurnRight, faTrashCan } from '@fortawesome/free-solid-svg-icons'
 
-import{CartToggleContext, CartItemQuantityContext, CartItemDataContext} from '../Helper/Context'
+import{CartToggleContext, CartItemQuantityContext, CartItemDataContext,CartTotalPriceContext} from '../Helper/Context'
 
 function Cart() {
 
   const {cartOpen,setCartOpen} = useContext(CartToggleContext)
   const {itemQuantity,setItemQuantity} = useContext(CartItemQuantityContext)
   const {cartItemData,setCartItemData} = useContext(CartItemDataContext)
-
+  const {cartTotalPrice,setCartTotalPrice} = useContext(CartTotalPriceContext)
 
   const handleBrokenImage = (event) => {
     event.target.src = 'https://askleo.askleomedia.com/wp-content/uploads/2004/06/no_image-300x245.jpg'
   }
-
-
-
 
   return (
     <div className={cartOpen?'cart--open':'cart--closed'}>
@@ -38,9 +35,10 @@ function Cart() {
             </div>
         </div>
         <div className='cart--open--bottom'>
-            {/* below should be a component */}
             
-            {cartItemData.map((data)=>{
+            {
+
+            cartItemData.map((data)=>{
 
                 return (
                     <div className='cart--open--bottom__item'>   
@@ -58,8 +56,18 @@ function Cart() {
                                                 let newList = cartItemData.filter((item)=>{
                                                         return (item.itemName !== data.itemName)
                                                 })
+                                                // newList.map((newPrice)=>{
+                                                //     return (setCartTotalPrice([newPrice.price]))
+                                                // })
                                                 setCartItemData(newList)
-                                                console.log(newList)
+
+
+
+
+
+                                            //ABOVE NEEDS FIXING FOR NEXT PROBLEM
+
+
                                             }} 
                                             className='cart__item--close__button'>
                                             <span className="cart__item--close__button--icon"><FontAwesomeIcon icon={faTrashCan}  /></span>
@@ -81,9 +89,15 @@ function Cart() {
                                     </div>
                                 </div>
                             </div>  
+                            
                     </div>
                 )
-            })}
+                
+            })
+            }
+            {/* <div className='cart__total__container'>
+                    <h3 className='cart__total'>Total : <span className='blood'>${cartTotalPrice.reduce((a,b)=>a+b,0)}</span></h3>
+            </div>    */}
         </div>
         
     </div>

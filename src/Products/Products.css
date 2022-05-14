@@ -55,7 +55,7 @@
 .product__card--button:hover{
     background-color: rgb(240, 45, 45);
 }
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 550px) {
     .product__card__container--info {
         top: -0.5%;
     }

@@ -1,3 +1,6 @@
+.blood{
+    color: #bb0001;
+}
 .cart--closed{
     height: 100vh;
     z-index: 666;
@@ -196,6 +199,18 @@
     font-size: 1.2em;
 }
 
+
+.cart__total__container{
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.cart__total{
+    width: fit-content;
+    position: relative;
+    left: 55%;
+}
 
 
 
