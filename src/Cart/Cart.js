@@ -5,14 +5,14 @@ import empty from '../assets/cart_empty.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowTurnRight, faTrashCan } from '@fortawesome/free-solid-svg-icons'
 
-import{CartToggleContext, CartItemQuantityContext, CartItemDataContext,CartTotalPriceContext} from '../Helper/Context'
+import{CartToggleContext, CartItemQuantityContext, CartItemDataContext} from '../Helper/Context'
 
 function Cart() {
 
   const {cartOpen,setCartOpen} = useContext(CartToggleContext)
   const {itemQuantity,setItemQuantity} = useContext(CartItemQuantityContext)
   const {cartItemData,setCartItemData} = useContext(CartItemDataContext)
-  const {cartTotalPrice,setCartTotalPrice} = useContext(CartTotalPriceContext)
+//   const {cartTotalPrice,setCartTotalPrice} = useContext(CartTotalPriceContext)
 
   const handleBrokenImage = (event) => {
     event.target.src = 'https://askleo.askleomedia.com/wp-content/uploads/2004/06/no_image-300x245.jpg'
@@ -94,7 +94,7 @@ function Cart() {
                     </div>
                 )
                 
-            }) : <div><h2>Your cart is empty sir.</h2><img className='cart--empty--image' src={empty}/></div>
+            }) : <div><h2>Your cart is empty sir.</h2><img alt='apu closing' className='cart--empty--image' src={empty}/></div>
             }
             {/* <div className='cart__total__container'>
                     <h3 className='cart__total'>Total : <span className='blood'>${cartTotalPrice.reduce((a,b)=>a+b,0)}</span></h3>
