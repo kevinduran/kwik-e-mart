@@ -94,7 +94,7 @@ function Cart() {
                     </div>
                 )
                 
-            }) : <div><h2>Your cart is empty sir.</h2><img alt='apu closing' className='cart--empty--image' src={empty}/></div>
+            }) : <div><h2 className='empty--text'>Your cart is empty sir.</h2><img alt='apu closing' className='cart--empty--image' src={empty}/></div>
             }
             {/* <div className='cart__total__container'>
                     <h3 className='cart__total'>Total : <span className='blood'>${cartTotalPrice.reduce((a,b)=>a+b,0)}</span></h3>
