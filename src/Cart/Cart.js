@@ -1,5 +1,6 @@
 import React,{useContext} from 'react'
 import './Cart.css'
+import empty from '../assets/cart_empty.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowTurnRight, faTrashCan } from '@fortawesome/free-solid-svg-icons'
@@ -38,7 +39,7 @@ function Cart() {
             
             {
 
-            cartItemData.map((data)=>{
+            cartItemData.length > 0 ? cartItemData.map((data)=>{
 
                 return (
                     <div className='cart--open--bottom__item'>   
@@ -93,7 +94,7 @@ function Cart() {
                     </div>
                 )
                 
-            })
+            }) : <div><h2>Your cart is empty sir.</h2><img className='cart--empty--image' src={empty}/></div>
             }
             {/* <div className='cart__total__container'>
                     <h3 className='cart__total'>Total : <span className='blood'>${cartTotalPrice.reduce((a,b)=>a+b,0)}</span></h3>
