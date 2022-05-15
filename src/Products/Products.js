@@ -24,7 +24,7 @@ function Products(productData) {
   return (
     <div className='product__card__container'>
       {productCardAmountInfo && <p className='product__card__container--info'>* we found {categoryTermAmount} total {categoryTerm} products</p>   }
-      {emptyProductsDefault && <h2 className='blood'>hmmm we could not find any ' {searchTerm} '...</h2>}
+      {emptyProductsDefault && <h2 className='blood empty--products'>hmmm we could not find any {searchTerm} ...</h2>}
       {     
       // eslint-disable-next-line
        myProductData.filter((val)=> {        
