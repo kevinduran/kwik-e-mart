@@ -1,7 +1,7 @@
 import React,{useContext} from 'react'
 import './Products.css'
 
-import{CartToggleContext, CartItemDataContext,ProductsFilterContext,ProductsCategoryContext,CategoryTermAmountContext,ProductCardAmountInfoContext,CartTotalPriceContext} from '../Helper/Context'
+import{CartToggleContext, CartItemDataContext,ProductsFilterContext,ProductsCategoryContext,CategoryTermAmountContext,ProductCardAmountInfoContext,CartTotalPriceContext,EmptyProductsDefaultContext} from '../Helper/Context'
 
 function Products(productData) {
 
@@ -12,7 +12,7 @@ function Products(productData) {
   const {categoryTermAmount,setCategoryTermAmount} = useContext(CategoryTermAmountContext)
   const {productCardAmountInfo} = useContext(ProductCardAmountInfoContext)
   const {cartTotalPrice, setCartTotalPrice} = useContext(CartTotalPriceContext)
-
+  const {emptyProductsDefault, setEmptyProductsDefault} = useContext(EmptyProductsDefaultContext)
    
       const handleBrokenImage = (event) => {
         event.target.src = 'https://askleo.askleomedia.com/wp-content/uploads/2004/06/no_image-300x245.jpg'
@@ -24,17 +24,25 @@ function Products(productData) {
   return (
     <div className='product__card__container'>
       {productCardAmountInfo && <p className='product__card__container--info'>* we found {categoryTermAmount} total {categoryTerm} products</p>   }
+      {emptyProductsDefault && <h2 className='blood'>hmmm we could not find any ' {searchTerm} '...</h2>}
       {     
       // eslint-disable-next-line
        myProductData.filter((val)=> {        
         if(searchTerm === ''){
+          setEmptyProductsDefault(false)  
+
           return val
         }else if (val.itemName.toLowerCase().includes(searchTerm.toLowerCase()) ){   
+          setEmptyProductsDefault(false)  
           return val
+        }else if (val.itemName.toLowerCase().includes(searchTerm.toLowerCase()) === false){
+          setEmptyProductsDefault(true);
         }
-        // eslint-disable-next-line
+          // eslint-disable-next-line
       }).filter((val)=> {
         if(categoryTerm === ''){
+          setEmptyProductsDefault(false)  
+
           return val
         }else if (val.itemCategory.toLowerCase().includes(categoryTerm.toLowerCase()) ){
           myProductArray.push(val)
@@ -47,7 +55,9 @@ function Products(productData) {
       }).map((product,index)=>{
           return (
                
-            index<16 && <div className='product__card' key={product.itemnum}>
+            index < 16 &&
+            
+            <div className='product__card' key={product.itemnum}>
               <div className='product__card--section__container product__card--image__container'>
                 <img
                   className='product__card--image'
@@ -72,7 +82,7 @@ function Products(productData) {
                       )}} className='product__card--button'>
                 add to cart</button>
               </div>
-            </div>         
+            </div> 
            
         )
         

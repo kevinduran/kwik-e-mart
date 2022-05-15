@@ -7,7 +7,7 @@ import Products from './Products/Products';
 import Cart from './Cart/Cart';
 import Footer from './Footer/Footer'
 
-import {CartToggleContext,CartItemQuantityContext,CartItemDataContext , ProductsFilterContext,ProductsCategoryContext, CategoryToggleContext, ArrowPositionContext, CategoryMenuNameContext, CategoryTermAmountContext,ProductCardAmountInfoContext,CartTotalPriceContext} from './Helper/Context'
+import {CartToggleContext,CartItemQuantityContext,CartItemDataContext , ProductsFilterContext,ProductsCategoryContext, CategoryToggleContext, ArrowPositionContext, CategoryMenuNameContext, CategoryTermAmountContext,ProductCardAmountInfoContext,CartTotalPriceContext, EmptyProductsDefaultContext} from './Helper/Context'
 function App() {
 
   const [categoryOpen, setCategoryOpen] = useState(false);
@@ -21,9 +21,11 @@ function App() {
   const [cartTotalPrice,setCartTotalPrice] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [productCardAmountInfo,setProductCardAmountInfo] = useState(false)
+  const [emptyProductsDefault, setEmptyProductsDefault] = useState(false)
   return (
     <ProductsCategoryContext.Provider value={{categoryTerm,setCategoryTerm}}>
     <ProductsFilterContext.Provider value={{searchTerm,setSearchTerm}}>
+    <EmptyProductsDefaultContext.Provider value={{emptyProductsDefault,setEmptyProductsDefault}}>
     <ProductCardAmountInfoContext.Provider value={{productCardAmountInfo,setProductCardAmountInfo}}>
     <CategoryTermAmountContext.Provider value={{categoryTermAmount,setCategoryTermAmount}}>  
     <CartTotalPriceContext.Provider value={{cartTotalPrice,setCartTotalPrice}}>
@@ -48,7 +50,8 @@ function App() {
      </CartItemDataContext.Provider>
      </CartTotalPriceContext.Provider>
      </CategoryTermAmountContext.Provider>
-     </ProductCardAmountInfoContext.Provider>  
+     </ProductCardAmountInfoContext.Provider> 
+     </EmptyProductsDefaultContext.Provider>   
      </ProductsFilterContext.Provider>
      </ProductsCategoryContext.Provider>
   );
