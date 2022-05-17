@@ -5,13 +5,15 @@ import empty from '../assets/cart_empty.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowTurnRight, faTrashCan } from '@fortawesome/free-solid-svg-icons'
 
-import{CartToggleContext, CartItemQuantityContext, CartItemDataContext} from '../Helper/Context'
+import{CartToggleContext, CartItemQuantityContext, CartItemDataContext, CheckoutToggleContext} from '../Helper/Context'
 
 function Cart() {
 
   const {cartOpen,setCartOpen} = useContext(CartToggleContext)
   const {itemQuantity,setItemQuantity} = useContext(CartItemQuantityContext)
   const {cartItemData,setCartItemData} = useContext(CartItemDataContext)
+  const {setCheckoutOpen} = useContext(CheckoutToggleContext)
+
 //   const {cartTotalPrice,setCartTotalPrice} = useContext(CartTotalPriceContext)
 
   const handleBrokenImage = (event) => {
@@ -29,9 +31,9 @@ function Cart() {
                 </button>
             </div>
             <div className='cart--open--button--checkout__container'>
-                <button className='cart--open--button--checkout'>
-                <span className="cart--open--button--checkout--i"><FontAwesomeIcon icon={faArrowTurnRight}  /></span>
-                <p className="cart--open--button--checkout--p">go to checkout</p>
+                <button className='cart--open--button--checkout' onClick={()=>setCheckoutOpen(true)}>
+                    <span className="cart--open--button--checkout--i"><FontAwesomeIcon icon={faArrowTurnRight}  /></span>
+                    <p className="cart--open--button--checkout--p">go to checkout</p>
                 </button>
             </div>
         </div>

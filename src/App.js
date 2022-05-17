@@ -6,14 +6,16 @@ import Header from './Header/Header';
 import Products from './Products/Products';
 import Cart from './Cart/Cart';
 import Footer from './Footer/Footer'
+import Checkout from './Checkout/Checkout'
 
-import {CartToggleContext,CartItemQuantityContext,CartItemDataContext , ProductsFilterContext,ProductsCategoryContext, CategoryToggleContext, ArrowPositionContext, CategoryMenuNameContext, CategoryTermAmountContext,ProductCardAmountInfoContext,CartTotalPriceContext, EmptyProductsDefaultContext} from './Helper/Context'
+import {CartToggleContext,CartItemQuantityContext,CartItemDataContext , ProductsFilterContext,ProductsCategoryContext, CategoryToggleContext, ArrowPositionContext, CategoryMenuNameContext, CategoryTermAmountContext,ProductCardAmountInfoContext,CartTotalPriceContext, EmptyProductsDefaultContext, CheckoutToggleContext} from './Helper/Context'
 function App() {
 
   const [categoryOpen, setCategoryOpen] = useState(false);
   const [arrowPosition, setArrowPosition] = useState(true);
   const [categoryMenuName, setCategoryMenuName] = useState(true);
   const [cartOpen, setCartOpen] = useState(false);
+  const [checkoutOpen, setCheckoutOpen] = useState(false)
   const [itemQuantity,setItemQuantity] = useState(1);
   const [cartItemData, setCartItemData] =  useState([]);
   const [categoryTerm, setCategoryTerm] = useState('');
@@ -33,17 +35,20 @@ function App() {
     <CategoryToggleContext.Provider value={{categoryOpen, setCategoryOpen}}>
     <CategoryMenuNameContext.Provider value={{categoryMenuName,setCategoryMenuName}}>
     <ArrowPositionContext.Provider value={{arrowPosition, setArrowPosition}}>
+    <CheckoutToggleContext.Provider value={{checkoutOpen,setCheckoutOpen}}>
     <CartToggleContext.Provider value={{cartOpen, setCartOpen}}>
     <CartItemQuantityContext.Provider value={{itemQuantity,setItemQuantity}}>
         <div className="App">
           <Nav />
           <Cart />
+          <Checkout />
           <Header/>
           <Products productData={ProductData} />
           <Footer/>
         </div>  
      </CartItemQuantityContext.Provider> 
      </CartToggleContext.Provider> 
+     </CheckoutToggleContext.Provider>
      </ArrowPositionContext.Provider> 
      </CategoryMenuNameContext.Provider>  
      </CategoryToggleContext.Provider>

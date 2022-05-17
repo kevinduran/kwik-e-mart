@@ -1,0 +1,50 @@
+.checkout__container--closed{
+    height: 100vh;
+    z-index: 667;
+    position: fixed;
+    right: -40%;
+    width: 40%;
+    background-color: #66bc34f5;
+    padding: 1em;
+    transition: 0.5s ease all;
+}
+.checkout__container--open{
+    right: 0;
+    height: 100vh;
+    z-index: 667;
+    position: fixed;
+    width: 100%;
+    background-color: #66bc34f5;
+    padding: 1em;
+    transition: 0.5s ease all;
+    overflow: scroll;
+}
+.checkout--open--text__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    line-height: 3;
+    color: aliceblue;
+    font-size: 1.2em;
+}
+.checkout--open--button--close__container{
+    position: relative;
+    height: 10%;
+}
+
+.checkout--open--button--close{
+    border: none;
+    background-color: transparent;
+    padding: 3px 9px 13px 9px;
+    cursor: pointer;
+    position: relative;
+    left: 3%;
+    top: 30%;
+}
+
+  
+.checkout--open--button--close:hover .x--line{
+    border-bottom: 4px solid #bb0001;
+}

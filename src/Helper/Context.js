@@ -2,6 +2,7 @@ import { createContext } from "react";
 
 export const CartItemQuantityContext = createContext({});
 export const CartToggleContext = createContext({});
+export const CheckoutToggleContext= createContext({});
 export const CategoryToggleContext = createContext({});
 export const CategoryMenuNameContext = createContext({});
 export const ArrowPositionContext = createContext({});
