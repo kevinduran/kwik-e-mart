@@ -18,9 +18,9 @@ function Checkout() {
           </button>
         </div>
         <div className='checkout--open--text__container'>
-            <h2>KWIK-E-MART is a demo site.</h2>
-            <h2>You can not buy anything.</h2> 
-            <h2>Go away.</h2>
+            <h2 className='checkout--text'>KWIK-E-MART is a demo site.</h2>
+            <h2 className='checkout--text'>You can not buy anything.</h2> 
+            <h2 className='checkout--text'>Go away.</h2>
         </div>
     </div>
   )

@@ -14,7 +14,7 @@
     z-index: 667;
     position: fixed;
     width: 100%;
-    background-color: #66bc34f5;
+    background-color: #66bc34fa;
     padding: 1em;
     transition: 0.5s ease all;
     overflow: scroll;
@@ -27,7 +27,7 @@
     height: 50%;
     line-height: 3;
     color: aliceblue;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 .checkout--open--button--close__container{
     position: relative;

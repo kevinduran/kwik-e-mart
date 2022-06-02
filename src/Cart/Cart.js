@@ -39,8 +39,7 @@ function Cart() {
         </div>
         <div className='cart--open--bottom'>
             
-            {
-
+        {
             cartItemData.length > 0 ? cartItemData.map((data)=>{
 
                 return (

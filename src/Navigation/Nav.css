@@ -130,7 +130,7 @@ nav{
     position: relative;
     top: 8em;
     height: 69%;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 .category__modal--item{
     height: 20%;
