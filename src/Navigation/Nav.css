@@ -131,6 +131,9 @@ nav{
     top: 8em;
     height: 69%;
     overflow-y: scroll;
+    -webkit-overflow-y:scroll;
+    -moz-overflow-y:scroll;
+    -o-overflow-y:scroll;
 }
 .category__modal--item{
     height: 20%;
