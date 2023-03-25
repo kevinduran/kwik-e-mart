@@ -17,7 +17,7 @@ function Products(productData) {
       const handleBrokenImage = (event) => {
         event.target.src = 'https://askleo.askleomedia.com/wp-content/uploads/2004/06/no_image-300x245.jpg'
       }
-  
+      
       let myProductData= productData.productData;
       let myProductArray = []
 
