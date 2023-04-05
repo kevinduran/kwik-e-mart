@@ -38,7 +38,6 @@ function Products(productData) {
         }else if (val.itemName.toLowerCase().includes(searchTerm.toLowerCase()) === false){
           setEmptyProductsDefault(true);
         }
-        
           // eslint-disable-next-line
       }).filter((val)=> {
         if(categoryTerm === ''){
