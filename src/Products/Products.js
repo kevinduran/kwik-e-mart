@@ -51,7 +51,6 @@ function Products(productData) {
           
           return val
         }
-        
   // eslint-disable-next-line
       }).map((product,index)=>{
           return (
