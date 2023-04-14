@@ -30,7 +30,6 @@ function Products(productData) {
        myProductData.filter((val)=> {        
         if(searchTerm === ''){
           setEmptyProductsDefault(false)  
-
           return val
         }else if (val.itemName.toLowerCase().includes(searchTerm.toLowerCase()) ){   
           setEmptyProductsDefault(false)  
@@ -48,7 +47,6 @@ function Products(productData) {
           myProductArray.push(val)
           setCategoryTermAmount(myProductArray.length)   
           //NEED TO SOMEHOW SET TOTAL NUMBER OF CATEGORY ITEMS HERE
-          
           return val
         }
   // eslint-disable-next-line
